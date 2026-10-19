@@ -2428,7 +2428,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (mediaLabel) {
                 mediaLabel.textContent = videoReady
                     ? "Watch Inauguration"
-                    : "Upload Pending";
+                    : card.dataset.comingSoon === "true"
+                        ? "Coming Soon"
+                        : "Upload Pending";
             }
 
             if (uploadMessage) {
