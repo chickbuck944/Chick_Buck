@@ -1400,12 +1400,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (heroVideo) {
 
-        // Phones buffer early for stable playback. On larger screens, metadata
-        // is enough until the video enters view, avoiding a heavy initial load.
-        heroVideo.preload = window.matchMedia("(max-width: 767px)").matches
-            ? "auto"
-            : "metadata";
-        heroVideo.load();
+        // Let the browser's native muted autoplay start playback. Avoid calling
+        // load() here: reloading media after the page is ready can leave a
+        // desktop browser on the poster image.
+        heroVideo.preload = "auto";
 
         heroVideo.addEventListener(
             "waiting",
