@@ -1,0 +1,900 @@
+file:///c%3A/Users/USER/Desktop/chick%20buck/mainmenu.html {"mtime":1789843777763,"ctime":1789843777763,"size":0,"etag":"3gm0soiia0","orphaned":false,"typeId":""}
+<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Explore the Chick Buck menu featuring Saudi-style broasted chicken, burgers, starters, sandwiches, fresh juices, shakes, falooda and more." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="Chick Buck" name="author"/>
+<meta content="#c40000" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Chick Buck" property="og:site_name"/>
+<meta content="en_IN" property="og:locale"/>
+<meta content="Chick Buck Menu | The Unique Taste of Saudi Arabia" property="og:title"/>
+<meta content="Explore the Chick Buck menu featuring Saudi-style broasted chicken, burgers, starters, sandwiches, fresh juices, shakes, falooda and more." property="og:description"/>
+<meta content="https://chickbuck.com/menu.html" property="og:url"/>
+<meta content="https://chickbuck.com/asset/image/chick-buck-social-share.jpg" property="og:image"/>
+<meta content="image/jpeg" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Chick Buck loaded fries" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Chick Buck Menu | The Unique Taste of Saudi Arabia
+" name="twitter:title"/>
+<meta content="Explore the Chick Buck menu featuring Saudi-style broasted chicken, burgers, starters, sandwiches, fresh juices, shakes, falooda and more." name="twitter:description"/>
+<meta content="https://chickbuck.com/asset/image/chick-buck-social-share.jpg" name="twitter:image"/>
+<meta content="Chick Buck loaded fries" name="twitter:image:alt"/>
+<title>Chick Buck Menu | The Unique Taste of Saudi Arabia</title>
+<link href="https://chickbuck.com/menu.html" rel="canonical"/>
+<link href="asset/image/logo-icon.png?v=20260909" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="asset/css/style.css?v=20260901-mobile-theme" rel="stylesheet"/>
+<link href="asset/css/responsive.css?v=20260826-site-audit" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Menu",
+      "@id": "https://chickbuck.com/menu.html#menu",
+      "name": "Chick Buck Menu",
+      "url": "https://chickbuck.com/menu.html",
+      "description": "Saudi-style broasted chicken, burgers, starters, sandwiches, fresh juices, shakes and desserts.",
+      "hasMenuSection": [
+        {"@type": "MenuSection", "name": "Broasted Chicken"},
+        {"@type": "MenuSection", "name": "Starters"},
+        {"@type": "MenuSection", "name": "Burgers"},
+        {"@type": "MenuSection", "name": "Sandwiches"},
+        {"@type": "MenuSection", "name": "Fresh Juice"},
+        {"@type": "MenuSection", "name": "Shakes"},
+        {"@type": "MenuSection", "name": "Lime"},
+        {"@type": "MenuSection", "name": "Mojito"},
+        {"@type": "MenuSection", "name": "Soda"},
+        {"@type": "MenuSection", "name": "Ice Cream"},
+        {"@type": "MenuSection", "name": "Falooda"},
+        {"@type": "MenuSection", "name": "Kulikki"}
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://chickbuck.com/menu.html#webpage",
+      "name": "Chick Buck Menu",
+      "url": "https://chickbuck.com/menu.html",
+      "description": "Explore the complete Chick Buck food and drinks menu.",
+      "inLanguage": "en-IN",
+      "isPartOf": {"@id": "https://chickbuck.com/#website"},
+      "about": {"@id": "https://chickbuck.com/#restaurant"},
+      "mainEntity": {"@id": "https://chickbuck.com/menu.html#menu"}
+    }
+  ]
+}
+</script>
+</head>
+<body class="site-theme menu-page-body">
+<a class="skip-link" href="#mainContent">Skip to content</a>
+<!-- =========================================
+         FLOATING BLACK GLASS NAVBAR
+    ========================================== -->
+<header class="site-header glass-header" id="siteHeader">
+<div class="glass-navbar">
+<!-- BRAND -->
+<a aria-label="Chick Buck home" class="glass-brand" href="index.html">
+<img alt="Chick Buck logo" height="500" src="asset/image/logo2.png" width="500"/>
+<div class="glass-brand-text">
+<strong>Chick Buck</strong>
+<small>
+                        The Unique Taste of Saudi Arabia
+                    </small>
+</div>
+</a>
+<!-- NAVIGATION -->
+<nav aria-label="Primary navigation" class="nav-menu glass-nav-links" id="navMenu">
+<a href="index.html">
+                    Home
+                </a>
+<a aria-current="page" class="active" href="menu.html">
+                    Menu
+                </a>
+<a href="about.html">
+                    About
+                </a>
+<a href="contact.html">
+                    Contact
+                </a>
+</nav>
+<!-- VISIT OUTLET -->
+<a class="glass-visit-button" href="contact.html">
+
+                Visit Outlet
+
+            </a>
+<!-- MOBILE MENU BUTTON -->
+<button aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation" class="menu-toggle glass-menu-toggle" id="menuToggle" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</header>
+<main class="menu-page" id="mainContent">
+<!-- =========================================
+             MENU TITLE
+        ========================================== -->
+<section class="menu-page-hero">
+<div class="container">
+<p class="menu-small-title">
+                    Freshly Prepared
+                </p>
+<h1>Our Menu</h1>
+<div class="menu-title-line"></div>
+</div>
+</section>
+<!-- =========================================
+             CATEGORY FILTERS
+        ========================================== -->
+<section class="menu-filter-section">
+<div class="container">
+<div class="menu-tools">
+<label class="menu-search" for="menuSearch">
+<span>Search the menu</span>
+<input autocomplete="off" id="menuSearch" placeholder="Try broasted, fries or lime..." type="search"/>
+</label>
+<p aria-live="polite" class="menu-results-count" id="menuResultsCount"></p>
+</div>
+<div aria-label="Menu categories" class="menu-filters" role="group">
+<button aria-pressed="true" class="filter-btn active" data-filter="all" type="button">
+                        All
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="broasted" type="button">
+                        Broasted
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="starters" type="button">
+                        Starters
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="burgers" type="button">
+                        Burgers
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="sandwich" type="button">
+                        Sandwich
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="juice" type="button">
+                        Fresh Juice
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="shake" type="button">
+                        Shakes
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="lime" type="button">
+                        Lime
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="mojito" type="button">
+                        Mojito
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="soda" type="button">
+                        Soda
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="icecream" type="button">
+                        Ice Cream
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="falooda" type="button">
+                        Falooda
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="kulikki" type="button">
+                        Kulikki
+                    </button>
+</div>
+</div>
+</section>
+<!-- =========================================
+             MENU CARDS
+        ========================================== -->
+<section class="menu-products-section">
+<div class="container">
+<div class="menu-products-grid" id="menuGrid">
+<!-- Cards are created with JavaScript -->
+</div>
+<noscript>
+<div class="menu-noscript">
+<h2>Explore the Chick Buck menu</h2>
+<h3>Signature favourites</h3>
+<ul>
+<li><strong>CB Combo (3 Full)</strong> — broasted chicken, khubuz, fries, mayo and ketchup.</li>
+<li><strong>M3 (1 Full)</strong> — 8-piece chicken with khubuz, fries, mayo and ketchup.</li>
+<li><strong>M2 (Half)</strong> — 4-piece chicken with khubuz, fries, mayo and ketchup.</li>
+<li><strong>Loaded Fries</strong> — fries topped with cheese and signature sauce.</li>
+<li><strong>Zinger Burger</strong> — crispy chicken fillet, lettuce and signature mayo.</li>
+<li><strong>CB Special Sandwich</strong> — crispy chicken, lettuce, tomato and mayonnaise.</li>
+<li><strong>Orange Juice</strong> — freshly squeezed orange juice served chilled.</li>
+<li><strong>Tender Coconut Shake</strong> — creamy milkshake blended with tender coconut.</li>
+</ul>
+<p>Broasted chicken, starters, burgers, sandwiches, fresh juices, shakes, lime drinks, mojitos, sodas, ice cream, falooda and kulikki are available across our menu.</p>
+<a href="contact.html">Contact your nearest outlet for today’s availability →</a>
+</div>
+</noscript>
+<div class="menu-empty-state" hidden id="menuEmptyState">
+<strong>No menu items found.</strong>
+<span>Try another search or category.</span>
+</div>
+</div>
+</section>
+</main>
+<!-- =========================================
+         FOOTER
+    ========================================== -->
+<footer class="site-footer site-footer-redesign">
+<div class="container footer-redesign-inner">
+<section aria-labelledby="footerOutletsTitle" class="footer-outlet-hub">
+<p class="footer-redesign-eyebrow">Find a Chick Buck near you</p>
+<h2 id="footerOutletsTitle">Our Outlets</h2>
+<nav aria-label="Chick Buck outlet locations" class="footer-outlet-grid">
+<a href="contact.html?outlet=vengara#outletDetails"><span>01</span><strong>Chick Buck - Vengara</strong><i aria-hidden="true">→</i></a>
+<a href="contact.html?outlet=parappanangadi#outletDetails"><span>02</span><strong>Chick Buck - Parappanangadi</strong><i aria-hidden="true">→</i></a>
+<a href="contact.html?outlet=malappuram#outletDetails"><span>03</span><strong>Chick Buck - Malappuram</strong><i aria-hidden="true">→</i></a>
+<a href="contact.html?outlet=puthanathani#outletDetails"><span>04</span><strong>Chick Buck - Puthanathani</strong><i aria-hidden="true">→</i></a>
+<a href="contact.html?outlet=kadappadi#outletDetails"><span>05</span><strong>Chick Buck - Kadappadi</strong><i aria-hidden="true">→</i></a>
+<a href="contact.html?outlet=ksa-shop-1#outletDetails"><span>06</span><strong>Chick Buck - Al Amir Fawwaz, Prince Abdulmajeed</strong><i aria-hidden="true">→</i></a>
+<a href="contact.html?outlet=ksa-shop-2#outletDetails"><span>07</span><strong>Chick Buck - Mouawiyah Al Sulami, Al Ajwad</strong><i aria-hidden="true">→</i></a>
+<a href="contact.html?outlet=uae#outletDetails"><span>08</span><strong>Chick Buck - Abu Dhabi</strong><i aria-hidden="true">→</i></a>
+</nav>
+</section>
+<div class="footer-redesign-grid">
+<div class="footer-redesign-brand">
+<a aria-label="Chick Buck home" class="footer-redesign-logo" href="index.html">
+<img alt="" aria-hidden="true" height="500" loading="lazy" src="asset/image/logo2.png" width="500"/>
+<span><strong>Chick Buck</strong><small>The Unique Taste of Saudi Arabia</small></span>
+</a>
+<p>The unique taste of Saudi Arabia. Crispy broasted chicken crafted with bold spices, premium ingredients and hygiene-first kitchens.</p>
+</div>
+<nav aria-label="About Chick Buck" class="footer-redesign-links">
+<h3>About Chick Buck</h3>
+<a href="about.html#ourStory">About Us</a>
+<a href="about.html#journey">Our Journey</a>
+<a href="menu.html">Our Menu</a>
+<a href="contact.html">Contact Us</a>
+</nav>
+<div class="footer-social">
+<h3>Follow us on Social Media</h3>
+<div class="footer-social-links">
+<a aria-label="Chick Buck on Facebook" href="https://www.facebook.com/infochickbuck/" rel="noopener noreferrer" target="_blank"><span aria-hidden="true">f</span></a>
+<a aria-label="Chick Buck on Instagram" href="https://www.instagram.com/chick_buck_official/?hl=en" rel="noopener noreferrer" target="_blank"><span aria-hidden="true">◎</span></a>
+</div>
+<a class="footer-social-handle" href="https://www.instagram.com/chick_buck_official/?hl=en" rel="noopener noreferrer" target="_blank">@chick_buck_official</a>
+</div>
+</div>
+</div>
+<div class="container footer-grid">
+<div class="footer-brand">
+<a class="brand footer-logo" href="index.html">
+<img alt="Chick Buck logo" height="500" loading="lazy" src="asset/image/logo2.png" width="500"/>
+<div class="brand-text">
+<strong>Chick Buck</strong>
+<small>The Unique Taste of Saudi Arabia</small>
+</div>
+</a>
+<p>Serving crispy, juicy and freshly prepared Saudi-style broasted chicken.</p>
+</div>
+<div class="footer-links">
+<h3>Quick Links</h3>
+<a href="index.html">Home</a>
+<a aria-current="page" href="menu.html">Menu</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
+<div class="footer-links">
+<h3>Opening Hours</h3>
+<p>Monday – Sunday</p>
+<strong>11:00 AM – 11:00 PM</strong>
+</div>
+<div class="footer-links">
+<h3>Visit Us</h3>
+<p>Kerala, India</p>
+<a href="contact.html">View all locations →</a>
+</div>
+</div>
+<div class="container footer-bottom">
+<p>
+                © <span id="currentYear"></span>
+                Chick Buck. All Rights Reserved.
+            </p>
+</div>
+</footer>
+<button aria-label="Back to top" class="back-to-top" id="backToTop" type="button">
+
+        ↑
+
+    </button>
+<script src="asset/js/menu-images.js?v=20260826-menu-refresh"></script>
+<!-- =========================================
+         MENU DATA
+    ========================================== -->
+<script>
+
+        const menuItems = [
+
+            /* BROASTED — 5 ITEMS */
+
+            {
+                category: "broasted",
+                name: "CB Combo (3 Full)",
+                description: "24 pcs chicken, 12 khubuz, fries, mayo and ketchup",
+                price: "₹1739",
+                badge: "signature"
+            },
+
+            {
+                category: "broasted",
+                name: "M4 (2 FULL)",
+                description: "16 pcs chicken, 8 khubuz, fries, mayo and ketchup",
+                price: "₹649",
+                badge: "signature"
+            },
+
+            {
+                category: "broasted",
+                name: "M3 (1 FULL)",
+                description: "8 pcs chicken, 4 khubuz, fries, mayo and ketchup",
+                price: "₹649",
+                badge: "signature"
+            },
+
+            {
+                category: "broasted",
+                name: "M2 (Half)",
+                description: "4 pcs chicken, 2 khubuz, fries, mayo and ketchup",
+                price: "₹329",
+                badge: "signature"
+            },
+             {
+                category: "broasted",
+                name: "M1 (Quarter)",
+                description: "2 pcs chicken, 1 khubuz, fries, mayo and ketchup",
+                price: "₹169",
+                badge: "signature"
+            },
+
+            
+
+
+            /* STARTERS — 6 ITEMS */
+
+            {
+                category: "starters",
+                name: "French Fries",
+                description: "Golden fries with special seasoning",
+                price: "₹99",
+            },
+
+            {
+                category: "starters",
+                name: "Loaded Fries",
+                description: "Fries topped with cheese and signature sauce",
+                price: "₹219",
+                badge: "Popular"
+            },
+
+            {
+                category: "starters",
+                name: "Chicken Popcorn",
+                description: "Bite-sized crispy chicken with dipping sauce",
+                price: "₹179",
+            },
+
+            {
+                category: "starters",
+                name: "Chicken Strips",
+                description: "Crispy chicken strips 6pc served with mayo",
+                price: "₹169",
+            },
+
+            {
+                category: "starters",
+                name: "Crab Lollipop",
+                description: "Hot and crispy with spicy seasoning",
+                price: "₹199",
+            },
+
+            {
+                category: "starters",
+                name: "Chicken Nuggets",
+                description: "Crispy nuggets served 8pc with ketchup",
+                price: "₹169",
+            },
+
+
+            /* BURGERS — 5 ITEMS */
+
+            {
+                category: "burgers",
+                name: "Zinger Burger",
+                description: "Crispy chicken fillet, lettuce and signature mayo",
+                price: "₹79",
+                badge: "Best Seller"
+            },
+
+            {
+                category: "burgers",
+                name: "Big Burger",
+                description: "Crispy chicken, cheese and special sauce",
+                price: "₹199",
+                badge: "signature"
+            },
+
+            {
+                category: "burgers",
+                name: "CB Special Patty Burger Small",
+                description: "Two crispy chicken fillets with cheese",
+                price: "₹89",
+            },
+
+            {
+                category: "burgers",
+                name: "CB Special Patty Burger Big",
+                description: "Grilled chicken, lettuce, tomato and sauce",
+                price: "₹149",
+            },
+
+            {
+                category: "burgers",
+                name: "CB Special VEG Patty Burger",
+                description: "Crispy vegetable patty with fresh vegetables",
+                price: "₹79",
+            },
+
+
+            /* SANDWICH — 2 ITEMS */
+
+            {
+                category: "sandwich",
+                name: "CB Special Sandwich",
+                description: "Crispy chicken, lettuce, tomato and mayonnaise",
+                price: "₹89",
+            },
+
+            
+
+            {
+                category: "sandwich",
+                name: "Tortilla Sandwich",
+                description: "Chicken with fresh salad and sauce",
+                price: "₹139",
+            },
+
+
+            /* FRESH JUICE — 8 ITEMS */
+
+            {
+                category: "juice",
+                name: "Orange Juice",
+                description: "Freshly squeezed orange juice served chilled",
+                price: "₹60",
+            },
+
+            {
+                category: "juice",
+                name: "Mango Juice",
+                description: "Sweet and refreshing fresh mango juice",
+                price: "₹60",
+            },
+
+            {
+                category: "juice",
+                name: "Tender Juice",
+                description: "Fresh tender coconut water served chilled",
+                price: "₹60",
+            },
+
+            {
+                category: "juice",
+                name: "Pineapple Juice",
+                description: "Fresh pineapple juice served with ice",
+                price: "₹60",
+            },
+
+            {
+                category: "juice",
+                name: "Grape Juice",
+                description: "Fresh grape juice served chilled",
+                price: "₹60",
+            },
+
+            {
+                category: "juice",
+                name: "Beetroot Juice",
+                description: "Fresh beetroot juice blended and served chilled",
+                price: "₹60",
+                badge: "Popular"
+            },
+              {
+                category: "juice",
+                name: "Apple Juice",
+                description: "Refreshing blend of seasonal fruits",
+                price: "₹70",
+                
+            },
+               {
+                category: "juice",
+                name: "Mix Fruit Juice",
+                description: "Mix blend of seasonal fruits",
+                price: "₹70",
+                
+            },
+
+
+
+            /* SHAKES — 10 ITEMS */
+
+            {
+                category: "shake",
+                name: "Chocolate Shake",
+                description: "Thick chocolate shake with chocolate syrup",
+                price: "₹70",
+            },
+
+            {
+                category: "shake",
+                name: "Tender Coconut Shake",
+                description: "Creamy milkshake blended with Tender Coconut ",
+                price: "₹70",
+                badge: "Best Seller"
+            },
+
+            {
+                category: "shake",
+                name: "Papaya Shake",
+                description: "Creamy papaya-flavoured milkshake",
+                price: "₹70",
+            },
+
+            {
+                category: "shake",
+                name: "Chikku Shake",
+                description: " blending ripe chikoo fruit with chilled milk ",
+                price: "₹70",
+            },
+
+            {
+                category: "shake",
+                name: "Mango Shake",
+                description: "Creamy mango shake with fresh flavour",
+                price: "₹70",
+            },
+
+            {
+                category: "shake",
+                name: "Dry Fruit Shake",
+                description: "Rich shake blended with nuts and dry fruits",
+                price: "₹110",
+            },
+                 {
+                category: "shake",
+                name: "Cocktail King Shake",
+                description: "Rich shake blended with nuts and dry fruits",
+                price: "₹80",
+            },
+                 {
+                category: "shake",
+                name: "Cashew Shake",
+                description: "Rich shake blended with nuts ",
+                price: "₹70",
+            },
+                   {
+                category: "shake",
+                name: "Khajur(Dates) Shake",
+                description: "Rich shake blended with nuts ",
+                price: "₹70",
+            },
+                        {
+                category: "shake",
+                name: "Sharjah Shake",
+                description: "Rich shake blended with nuts ",
+                price: "₹70",
+            },
+
+
+
+
+            /* LIME — 4 ITEMS */
+
+            {
+                category: "lime",
+                name: "Fresh Lime",
+                description: "Fresh lemon juice with chilled water and ice",
+                price: "₹79",
+            },
+
+            {
+                category: "lime",
+                name: "Pineapple Lime",
+                description: "Fresh lime mixed with Pineapple ",
+                price: "₹20",
+            },
+
+            {
+                category: "lime",
+                name: "Mint Lime",
+                description: "Fresh lime blended with mint and ice",
+                price: "₹25",
+            },
+
+            {
+                category: "lime",
+                name: "Ginger Lime",
+                description: "Fresh lime mixed with ginger and ice",
+                price: "₹99",
+            },
+
+
+            /* MOJITO — 5 ITEMS */
+
+            {
+                category: "mojito",
+                name: "Blue Mojito",
+                description: "Blue citrus drink with mint and ice",
+                price: "₹90",
+            },
+
+            {
+                category: "mojito",
+                name: "Passion Fruit Mojito",
+                description: "Refreshing passion fruit, mint and soda cooler",
+                price: "₹90",
+                badge: "Popular"
+            },
+
+            {
+                category: "mojito",
+                name: "Orange Mojito",
+                description: "Refreshing orange, mint and sparkling soda cooler",
+                price: "₹90",
+            },
+
+            {
+                category: "mojito",
+                name: "Green Apple Mojito",
+                description: "Green apple, mint and soda served chilled",
+                price: "₹90",
+            },
+              {
+                category: "mojito",
+                name: "Strawberry Mojito",
+                description: "Strawberry, mint and soda served chilled",
+                price: "₹90",
+            },
+
+
+
+            /* SODA — 6 ITEMS */
+
+            {
+                category: "soda",
+                name: "Lemon Soda",
+                description: "Fresh lemon mixed with sparkling soda",
+                price: "₹25",
+            },
+
+            {
+                category: "soda",
+                name: "Chilly Soda",
+                description: "Chilled soda with a lively chilli kick",
+                price: "₹30",
+            },
+
+            {
+                category: "soda",
+                name: "Pineapple Soda",
+                description: "Fresh pineapple and chilled soda",
+                price: "₹50",
+            },
+
+            {
+                category: "soda",
+                name: "Blue Soda",
+                description: "Blue citrus-flavoured sparkling soda",
+                price: "₹50",
+            },
+             {
+                category: "soda",
+                name: "Green Mango Soda",
+                description: "Green mango-flavoured sparkling soda",
+                price: "₹50",
+            },
+              {
+                category: "soda",
+                name: "Grape Soda",
+                description: "Grape-flavoured sparkling soda",
+                price: "₹50",
+            },
+
+
+
+            /* ICE CREAM — 4 ITEMS */
+
+            {
+                category: "icecream",
+                name: "Vanilla Ice Cream",
+                description: "Creamy vanilla ice cream served cold",
+                price: "₹60",
+            },
+
+            {
+                category: "icecream",
+                name: "Chocolate Ice Cream",
+                description: "Rich chocolate ice cream with chocolate sauce",
+                price: "₹60",
+            },
+
+            {
+                category: "icecream",
+                name: "Strawberry Ice Cream",
+                description: "Creamy strawberry-flavoured ice cream",
+                price: "₹60",
+            },
+
+            {
+                category: "icecream",
+                name: "Tender Ice Cream",
+                description: "Tender ice cream with crunchy nuts",
+                price: "₹60",
+            },
+
+
+            /* FALOODA — 4 ITEMS */
+
+            {
+                category: "falooda",
+                name: "Royal Falooda",
+                description: "Ice cream, fruits, jelly, milk and sweet toppings",
+                price: "₹100",
+                badge: "Best Seller"
+            },
+
+            {
+                category: "falooda",
+                name: "Dry Fruit Falooda",
+                description: "Creamy falooda loaded with nuts and dry fruits",
+                price: "₹100",
+            },
+
+            {
+                category: "falooda",
+                name: "SP Falooda",
+                description: "SP Falooda and syrup",
+                price: "₹110",
+            },
+
+            {
+                category: "falooda",
+                name: "Arabian Falooda",
+                description: "  Arabian, milk, jelly and fruits",
+                price: "₹120",
+            },
+
+             {
+                category: "falooda",
+                name: "Fruit Custard",
+                description: " Fruit Custard,  jelly and fruits",
+                price: "₹60",
+            },
+
+
+
+            /* KULIKKI — 4 ITEMS */
+
+            {
+                category: "kulikki",
+                name: "Green Mango kulikki Sarbath",
+                description: "Green mango drink shaken with basil seeds and ice",
+                price: "₹50",
+            },
+
+            {
+                category: "kulikki",
+                name: "Boost kulikki Sarbath",
+                description: "Boost drink shaken with basil seeds and ice",
+                price: "₹50",
+            },
+
+            {
+                category: "kulikki",
+                name: "Passion Fruit Kulikki",
+                description: "Passion fruit drink shaken with basil seeds",
+                price: "₹50",
+            },
+            
+
+            {
+                category: "kulikki",
+                name: "Mosambi kulikki Sarbath",
+                description: "Mosambi, lemon, basil seeds and ice",
+                price: "₹50",
+            }
+            
+            
+
+        ];
+
+        const menuGrid = document.getElementById("menuGrid");
+
+
+        const menuImages = window.CHICK_BUCK_MENU_IMAGES || {};
+
+        const normalizedMenuImages = new Map(
+            Object.entries(menuImages).map(([itemName, filename]) => [
+                itemName.trim().toLocaleLowerCase(),
+                filename
+            ])
+        );
+
+        menuItems.forEach((item) => {
+
+            const card = document.createElement("article");
+
+            card.className = "menu-card reveal-item";
+
+            card.dataset.category = item.category;
+
+
+            const imageFile =
+                menuImages[item.name] ??
+                normalizedMenuImages.get(
+                    item.name.trim().toLocaleLowerCase()
+                ) ??
+                "";
+
+            const imageMarkup = imageFile
+                ? `
+                    <img
+                        src="asset/image/${imageFile}"
+                        alt="${item.name}"
+                        decoding="async"
+                        loading="lazy"
+                    >
+                `
+                : `
+                    <div class="menu-image-fallback" role="img" aria-label="${item.name} photo coming soon">
+                        <img src="asset/image/logo2.png" alt="" aria-hidden="true" width="500" height="500">
+                        <span>${item.name}</span>
+                    </div>
+                `;
+
+            const badge = item.badge
+                ? `<span class="menu-badge">${item.badge}</span>`
+                : "";
+
+            card.innerHTML = `
+
+                <div class="menu-card-image">
+
+                    ${imageMarkup}
+
+                    ${badge}
+
+                </div>
+
+
+                <div class="menu-card-content">
+
+                    <h2>${item.name}</h2>
+
+                    <p>${item.description}</p>
+
+                    <strong class="menu-price">
+                        ${item.price}
+                    </strong>
+
+                </div>
+
+            `;
+
+
+            menuGrid.appendChild(card);
+
+        });
+
+    </script>
+<script src="asset/js/main.js?v=20260901-mobile-theme"></script>
+</body>
+</html>

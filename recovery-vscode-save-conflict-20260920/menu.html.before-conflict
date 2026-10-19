@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta content="Explore the Chick Buck menu featuring Saudi-style broasted chicken, burgers, starters, sandwiches, fresh juices, shakes, falooda and more." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="Chick Buck" name="author"/>
+<meta content="#c40000" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Chick Buck" property="og:site_name"/>
+<meta content="en_IN" property="og:locale"/>
+<meta content="Chick Buck Menu | The Unique Taste of Saudi Arabia" property="og:title"/>
+<meta content="Explore the Chick Buck menu featuring Saudi-style broasted chicken, burgers, starters, sandwiches, fresh juices, shakes, falooda and more." property="og:description"/>
+<meta content="https://chickbuck.com/menu.html" property="og:url"/>
+<meta content="https://chickbuck.com/asset/image/chick-buck-social-share.jpg" property="og:image"/>
+<meta content="image/jpeg" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Chick Buck loaded fries" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Chick Buck Menu | The Unique Taste of Saudi Arabia
+" name="twitter:title"/>
+<meta content="Explore the Chick Buck menu featuring Saudi-style broasted chicken, burgers, starters, sandwiches, fresh juices, shakes, falooda and more." name="twitter:description"/>
+<meta content="https://chickbuck.com/asset/image/chick-buck-social-share.jpg" name="twitter:image"/>
+<meta content="Chick Buck loaded fries" name="twitter:image:alt"/>
+<title>Chick Buck Menu | The Unique Taste of Saudi Arabia</title>
+<link href="https://chickbuck.com/menu.html" rel="canonical"/>
+<link href="asset/image/logo-icon.png?v=20260909" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="asset/css/style.css?v=20260914-mobile-grid" rel="stylesheet"/>
+<link href="asset/css/responsive.css?v=20260914-mobile-grid" rel="stylesheet"/>
+<style>
+  .menu-browse-mode .order-cart,
+  .menu-browse-mode .order-review-modal,
+  .menu-browse-mode .table-order-bar { display: none !important; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Menu",
+      "@id": "https://chickbuck.com/menu.html#menu",
+      "name": "Chick Buck Menu",
+      "url": "https://chickbuck.com/menu.html",
+      "description": "Saudi-style broasted chicken, burgers, starters, sandwiches, fresh juices, shakes and desserts.",
+      "hasMenuSection": [
+        {"@type": "MenuSection", "name": "Broasted Chicken"},
+        {"@type": "MenuSection", "name": "Starters"},
+        {"@type": "MenuSection", "name": "Burgers"},
+        {"@type": "MenuSection", "name": "Sandwiches"},
+        {"@type": "MenuSection", "name": "Fresh Juice"},
+        {"@type": "MenuSection", "name": "Shakes"},
+        {"@type": "MenuSection", "name": "Lime"},
+        {"@type": "MenuSection", "name": "Mojito"},
+        {"@type": "MenuSection", "name": "Soda"},
+        {"@type": "MenuSection", "name": "Ice Cream"},
+        {"@type": "MenuSection", "name": "Falooda"},
+        {"@type": "MenuSection", "name": "Kulikki"}
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://chickbuck.com/menu.html#webpage",
+      "name": "Chick Buck Menu",
+      "url": "https://chickbuck.com/menu.html",
+      "description": "Explore the complete Chick Buck food and drinks menu.",
+      "inLanguage": "en-IN",
+      "isPartOf": {"@id": "https://chickbuck.com/#website"},
+      "about": {"@id": "https://chickbuck.com/#restaurant"},
+      "mainEntity": {"@id": "https://chickbuck.com/menu.html#menu"}
+    }
+  ]
+}
+</script>
+</head>
+<body class="site-theme menu-page-body">
+<a class="skip-link" href="#mainContent">Skip to content</a>
+
+<header class="site-header glass-header" id="siteHeader">
+<div class="glass-navbar">
+
+<a aria-label="Chick Buck home" class="glass-brand" href="index.html">
+<img alt="Chick Buck logo" height="500" src="asset/image/logo2.png" width="500"/>
+<div class="glass-brand-text">
+<strong>Chick Buck</strong>
+<small>
+                        The Unique Taste of Saudi Arabia
+                    </small>
+</div>
+</a>
+
+<nav aria-label="Primary navigation" class="nav-menu glass-nav-links" id="navMenu">
+<a href="index.html">
+                    Home
+                </a>
+<a aria-current="page" class="active" href="mainmenu.html">
+                    Menu
+                </a>
+<a href="about.html">
+                    About
+                </a>
+<a href="contact.html">
+                    Contact
+                </a>
+</nav>
+
+<a class="glass-visit-button" id="menuModeLink" href="menu.html">
+                Place order
+            </a>
+
+<button aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation" class="menu-toggle glass-menu-toggle" id="menuToggle" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</header>
+<main class="menu-page" id="mainContent">
+
+<section class="menu-page-hero">
+<div class="container">
+<p class="menu-small-title">
+                    Freshly Prepared
+                </p>
+<h1>Our Menu</h1>
+<div class="menu-title-line"></div>
+</div>
+</section>
+
+<section class="menu-filter-section">
+<div class="container">
+<div class="menu-tools">
+<label class="menu-search" for="menuSearch">
+<span>Search the menu</span>
+<input autocomplete="off" id="menuSearch" placeholder="Try broasted, fries or lime..." type="search"/>
+</label>
+<p aria-live="polite" class="menu-results-count" id="menuResultsCount"></p>
+</div>
+<div aria-label="Menu categories" class="menu-filters" role="group">
+<button aria-pressed="true" class="filter-btn active" data-filter="all" type="button">
+                        All
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="broasted" type="button">
+                        Broasted
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="starters" type="button">
+                        Starters
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="burgers" type="button">
+                        Burgers
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="sandwich" type="button">
+                        Sandwich
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="juice" type="button">
+                        Fresh Juice
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="shake" type="button">
+                        Shakes
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="lime" type="button">
+                        Lime
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="mojito" type="button">
+                        Mojito
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="soda" type="button">
+                        Soda
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="icecream" type="button">
+                        Ice Cream
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="falooda" type="button">
+                        Falooda
+                    </button>
+<button aria-pressed="false" class="filter-btn" data-filter="kulikki" type="button">
+                        Kulikki
+                    </button>
+</div>
+</div>
+</section>
+
+<section class="menu-products-section">
+<div class="container">
+<section aria-labelledby="tableOrderTitle" class="table-order-bar" id="tableOrderPanel" hidden>
+<div>
+<p class="table-order-eyebrow">Table QR ordering</p>
+<h2 id="tableOrderTitle">Order for your table</h2>
+</div>
+<label for="tableNumber">Table number
+<input autocomplete="off" id="tableNumber" inputmode="text" maxlength="50" placeholder="For example, 5" required type="text"/>
+</label>
+<p class="table-order-note">Your table can be pre-filled by a QR code link.</p>
+</section>
+<section aria-labelledby="deliveryOrderTitle" class="table-order-bar delivery-order-bar" id="deliveryOrderPanel" hidden>
+<div>
+<p class="table-order-eyebrow">Online delivery</p>
+<h2 id="deliveryOrderTitle">Delivery details</h2>
+<p class="table-order-note">Enter your details, add items, and continue to payment.</p>
+</div>
+<div class="delivery-fields">
+<div class="delivery-location-row"><button class="delivery-location-button" id="useMyLocation" type="button">Use my current location</button><span aria-live="polite" id="deliveryLocationStatus">Location is required to check delivery range.</span></div>
+<label for="deliveryName">Your name<input autocomplete="name" id="deliveryName" maxlength="100" placeholder="Your name" required type="text"/></label>
+<label for="deliveryPhone">Phone number<input autocomplete="tel" id="deliveryPhone" inputmode="tel" maxlength="20" placeholder="Your phone number" required type="tel"/></label>
+<label class="delivery-address" for="deliveryAddress">Delivery address<textarea autocomplete="street-address" id="deliveryAddress" maxlength="500" placeholder="House / building, street, area and landmark" required rows="2"></textarea></label>
+<label class="delivery-privacy-consent" for="deliveryPrivacyConsent"><input id="deliveryPrivacyConsent" required type="checkbox"/> <span>I agree that Chick Buck may use my name, phone number, address and location only to process and deliver this order. <a href="privacy.html" target="_blank" rel="noopener">Read Privacy Notice</a></span></label>
+</div>
+</section>
+<div class="menu-products-grid" id="menuGrid">
+
+</div>
+<noscript>
+<div class="menu-noscript">
+<h2>Explore the Chick Buck menu</h2>
+<h3>Signature favourites</h3>
+<ul>
+<li><strong>CB Combo (3 Full)</strong> — broasted chicken, khubuz, fries, mayo and ketchup.</li>
+<li><strong>M3 (1 Full)</strong> — 8-piece chicken with khubuz, fries, mayo and ketchup.</li>
+<li><strong>M2 (Half)</strong> — 4-piece chicken with khubuz, fries, mayo and ketchup.</li>
+<li><strong>Loaded Fries</strong> — fries topped with cheese and signature sauce.</li>
+<li><strong>Zinger Burger</strong> — crispy chicken fillet, lettuce and signature mayo.</li>
+<li><strong>CB Special Sandwich</strong> — crispy chicken, lettuce, tomato and mayonnaise.</li>
+<li><strong>Orange Juice</strong> — freshly squeezed orange juice served chilled.</li>
+<li><strong>Tender Coconut Shake</strong> — creamy milkshake blended with tender coconut.</li>
+</ul>
+<p>Broasted chicken, starters, burgers, sandwiches, fresh juices, shakes, lime drinks, mojitos, sodas, ice cream, falooda and kulikki are available across our menu.</p>
+<a href="contact.html">Contact your nearest outlet for today’s availability →</a>
+</div>
+</noscript>
+<div class="menu-empty-state" hidden id="menuEmptyState">
+<strong>No menu items found.</strong>
+<span>Try another search or category.</span>
+</div>
+</div>
+</section>
+</main>
+<aside aria-label="Your order" class="order-cart" id="orderCart">
+<button aria-controls="cartPanel" aria-expanded="false" class="cart-toggle" id="cartToggle" type="button">
+<span id="cartButtonLabel">View order</span><small id="cartButtonTotal">₹0</small><strong id="cartCount">0</strong>
+</button>
+<div class="cart-panel" id="cartPanel">
+<div class="cart-header">
+<div><p>Chick Buck</p><h2>Your order</h2></div>
+<button aria-label="Close order" class="cart-close" id="cartClose" type="button">×</button>
+</div>
+<div aria-live="polite" class="cart-items" id="cartItems"></div>
+<div class="cart-summary">
+<span>Total</span><strong id="cartTotal">₹0</strong>
+</div>
+<button class="cart-checkout" id="checkoutButton" type="button">Place order</button>
+<p aria-live="polite" class="cart-message" id="cartMessage"></p>
+</div>
+</aside>
+<div aria-hidden="true" aria-labelledby="reviewOrderTitle" class="order-review-modal" id="orderReviewModal" role="dialog">
+  <div class="order-review-card">
+    <button aria-label="Close order review" class="cart-close" id="closeReview" type="button">×</button>
+    <p class="table-order-eyebrow">Review your order</p>
+    <h2 id="reviewOrderTitle">Confirm your order</h2>
+    <p class="review-order-type" id="reviewOrderType"></p>
+    <div class="review-items" id="reviewItems"></div>
+    <div class="review-total"><span>Product total</span><strong id="reviewProductTotal">₹0</strong></div>
+    <div class="review-charge" id="reviewDeliveryFeeRow"><span>Delivery fee</span><strong id="reviewDeliveryFee">₹0</strong></div>
+    <div class="review-charge" id="reviewPackingFeeRow"><span>Packing fee</span><strong id="reviewPackingFee">₹0</strong></div>
+    <div class="review-grand-total"><span>Order total</span><strong id="reviewTotal">₹0</strong></div>
+    <section class="review-delivery" id="reviewDelivery" hidden>
+      <span>Delivery to</span>
+      <strong id="reviewCustomerName"></strong>
+      <p id="reviewAddress"></p>
+      <small id="reviewPhone"></small>
+    </section>
+    <section class="review-addons" aria-labelledby="addonsTitle">
+      <span id="addonsTitle">Add-ons / special requests</span>
+      <div class="addon-options" role="group" aria-label="Add-ons">
+        <label><input type="checkbox" value="Extra mayo"> Extra mayo</label>
+        <label><input type="checkbox" value="Ketchup"> Ketchup</label>
+        <label><input type="checkbox" value="Khubz"> Khubz</label>
+      </div>
+      <textarea id="orderAddons" maxlength="300" placeholder="Other request: no onion, extra spicy..." rows="3"></textarea>
+      <small>Add-on prices are confirmed by the branch, if applicable.</small>
+    </section>
+    <button class="cart-checkout" id="confirmOrderButton" type="button">Place order</button>
+</div>
+</div>
+
+    
+<footer class="site-footer site-footer-redesign">
+<div class="container footer-redesign-inner">
+<section aria-labelledby="footerOutletsTitle" class="footer-outlet-hub">
+<p class="footer-redesign-eyebrow">Find a Chick Buck near you</p>
+<h2 id="footerOutletsTitle">Our Outlets</h2>
+<nav aria-label="Chick Buck outlet locations" class="footer-outlet-grid">
+<a href="contact.html?outlet=vengara#outletDetails"><span>01</span><strong>Chick Buck - Vengara</strong><i aria-hidden="true">→</i></a>
+<a href="contact.html?outlet=parappanangadi#outletDetails"><span>02</span><strong>Chick Buck - Parappanangadi</strong><i aria-hidden="true">→</i></a>
+<a href="contact.html?outlet=malappuram#outletDetails"><span>03</span><strong>Chick Buck - Malappuram</strong><i aria-hidden="true">→</i></a>
+<a href="contact.html?outlet=puthanathani#outletDetails"><span>04</span><strong>Chick Buck - Puthanathani</strong><i aria-hidden="true">→</i></a>
+<a href="contact.html?outlet=kadappadi#outletDetails"><span>05</span><strong>Chick Buck - Kadappadi</strong><i aria-hidden="true">→</i></a>
+<a href="contact.html?outlet=ksa-shop-1#outletDetails"><span>06</span><strong>Chick Buck - Al Amir Fawwaz, Prince Abdulmajeed</strong><i aria-hidden="true">→</i></a>
+<a href="contact.html?outlet=ksa-shop-2#outletDetails"><span>07</span><strong>Chick Buck - Mouawiyah Al Sulami, Al Ajwad</strong><i aria-hidden="true">→</i></a>
+<a href="contact.html?outlet=uae#outletDetails"><span>08</span><strong>Chick Buck - Abu Dhabi</strong><i aria-hidden="true">→</i></a>
+</nav>
+</section>
+<div class="footer-redesign-grid">
+<div class="footer-redesign-brand">
+<a aria-label="Chick Buck home" class="footer-redesign-logo" href="index.html">
+<img alt="" aria-hidden="true" height="500" loading="lazy" src="asset/image/logo2.png" width="500"/>
+<span><strong>Chick Buck</strong><small>The Unique Taste of Saudi Arabia</small></span>
+</a>
+<p>The unique taste of Saudi Arabia. Crispy broasted chicken crafted with bold spices, premium ingredients and hygiene-first kitchens.</p>
+</div>
+<nav aria-label="About Chick Buck" class="footer-redesign-links">
+<h3>About Chick Buck</h3>
+<a href="about.html#ourStory">About Us</a>
+<a href="about.html#journey">Our Journey</a>
+<a href="menu.html">Our Menu</a>
+<a href="contact.html">Contact Us</a>
+<a href="privacy.html">Privacy Notice</a>
+</nav>
+<div class="footer-social">
+<h3>Follow us on Social Media</h3>
+<div class="footer-social-links">
+<a aria-label="Chick Buck on Facebook" href="https://www.facebook.com/infochickbuck/" rel="noopener noreferrer" target="_blank"><span aria-hidden="true">f</span></a>
+<a aria-label="Chick Buck on Instagram" href="https://www.instagram.com/chick_buck_official/?hl=en" rel="noopener noreferrer" target="_blank"><span aria-hidden="true">◎</span></a>
+</div>
+<a class="footer-social-handle" href="https://www.instagram.com/chick_buck_official/?hl=en" rel="noopener noreferrer" target="_blank">@chick_buck_official</a>
+</div>
+</div>
+</div>
+<div class="container footer-grid">
+<div class="footer-brand">
+<a class="brand footer-logo" href="index.html">
+<img alt="Chick Buck logo" height="500" loading="lazy" src="asset/image/logo2.png" width="500"/>
+<div class="brand-text">
+<strong>Chick Buck</strong>
+<small>The Unique Taste of Saudi Arabia</small>
+</div>
+</a>
+<p>Serving crispy, juicy and freshly prepared Saudi-style broasted chicken.</p>
+</div>
+<div class="footer-links">
+<h3>Quick Links</h3>
+<a href="index.html">Home</a>
+<a aria-current="page" href="menu.html">Menu</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
+<div class="footer-links">
+<h3>Opening Hours</h3>
+<p>Monday – Sunday</p>
+<strong>11:00 AM – 11:00 PM</strong>
+</div>
+<div class="footer-links">
+<h3>Visit Us</h3>
+<p>Kerala, India</p>
+<a href="contact.html">View all locations →</a>
+</div>
+</div>
+<div class="container footer-bottom">
+<p>
+                © <span id="currentYear"></span>
+                Chick Buck. All Rights Reserved.
+            </p>
+</div>
+</footer>
+<button aria-label="Back to top" class="back-to-top" id="backToTop" type="button">
+
+        ↑
+
+    </button>
+<script src="asset/js/menu-images.js?v=20260826-menu-refresh"></script>
+<script src="asset/js/app-config.js"></script>
+
+<script>
+
+        const ichefWebsiteProductIds = Object.freeze({
+            "M1 (Quarter)": "M1",
+            "M2 (Half)": "M2",
+            "M3 (1 FULL)": "M3",
+            "M4 (2 FULL)": "M4",
+            "French Fries": "FRENCH_FRIES",
+            "Loaded Fries": "LOADED_FRIES",
+            "Chicken Nuggets": "C1",
+            "Chicken Popcorn": "C6",
+            "Crab Lollipop": "C5",
+            "CB Special Patty Burger Small": "PATTY_BURGER_SMALL",
+            "CB Special Patty Burger Big": "PATTY_BURGER_BIG",
+            "CB Special VEG Patty Burger": "VEG_PATTY_BURGER",
+            "CB Special Sandwich": "SPECIAL_SANDWICH",
+            "Tortilla Sandwich": "TORTILLA_SANDWICH",
+            "Orange Juice": "ORANGE_JUICE",
+            "Mango Juice": "MANGO_JUICE",
+            "Tender Juice": "TENDER_JUICE",
+            "Pineapple Juice": "PINEAPPLE_JUICE",
+            "Grape Juice": "GRAPE_JUICE",
+            "Beetroot Juice": "BEETROOT_JUICE",
+            "Apple Juice": "APPLE_JUICE",
+            "Mix Fruit Juice": "MIX_FRUIT_JUICE"
+        });
+
+        const menuItems = [
+
+            
+
+            {
+                category: "broasted",
+                name: "CB Combo (3 Full)",
+                description: "24 pcs chicken, 12 khubuz, fries, mayo and ketchup",
+                price: "₹1,947",
+                badge: "signature"
+            },
+
+            {
+                category: "broasted",
+                name: "M4 (2 FULL)",
+                description: "16 pcs chicken, 8 khubuz, fries, mayo and ketchup",
+                price: "₹1,298",
+                badge: "signature"
+            },
+
+            {
+                category: "broasted",
+                name: "M3 (1 FULL)",
+                description: "8 pcs chicken, 4 khubuz, fries, mayo and ketchup",
+                price: "₹649",
+                badge: "signature"
+            },
+
+            {
+                category: "broasted",
+                name: "M2 (Half)",
+                description: "4 pcs chicken, 2 khubuz, fries, mayo and ketchup",
+                price: "₹329",
+                badge: "signature"
+            },
+             {
+                category: "broasted",
+                name: "M1 (Quarter)",
+                description: "2 pcs chicken, 1 khubuz, fries, mayo and ketchup",
+                price: "₹169",
+                badge: "signature"
+            },
+
+            
+
+
+            
+
+            {
+                category: "starters",
+                name: "French Fries",
+                description: "Golden fries with special seasoning",
+                price: "₹99",
+            },
+
+            {
+                category: "starters",
+                name: "Loaded Fries",
+                description: "Fries topped with cheese and signature sauce",
+                price: "₹219",
+                badge: "Popular"
+            },
+
+            {
+                category: "starters",
+                name: "Chicken Popcorn",
+                description: "Bite-sized crispy chicken with dipping sauce",
+                price: "₹179",
+            },
+
+            {
+                category: "starters",
+                name: "Chicken Strips",
+                description: "Crispy chicken strips 6pc served with mayo",
+                price: "₹169",
+            },
+
+            {
+                category: "starters",
+                name: "Crab Lollipop",
+                description: "Hot and crispy with spicy seasoning",
+                price: "₹199",
+            },
+
+            {
+                category: "starters",
+                name: "Chicken Nuggets",
+                description: "Crispy nuggets served 8pc with ketchup",
+                price: "₹169",
+            },
+
+
+            
+
+            {
+                category: "burgers",
+                name: "Zinger Burger",
+                description: "Crispy chicken fillet, lettuce and signature mayo",
+                price: "₹79",
+                badge: "Best Seller"
+            },
+
+            {
+                category: "burgers",
+                name: "Big Burger",
+                description: "Crispy chicken, cheese and special sauce",
+                price: "₹199",
+                badge: "signature"
+            },
+
+            {
+                category: "burgers",
+                name: "CB Special Patty Burger Small",
+                description: "Two crispy chicken fillets with cheese",
+                price: "₹89",
+            },
+
+            {
+                category: "burgers",
+                name: "CB Special Patty Burger Big",
+                description: "Grilled chicken, lettuce, tomato and sauce",
+                price: "₹149",
+            },
+
+            {
+                category: "burgers",
+                name: "CB Special VEG Patty Burger",
+                description: "Crispy vegetable patty with fresh vegetables",
+                price: "₹79",
+            },
+
+
+            
+
+            {
+                category: "sandwich",
+                name: "CB Special Sandwich",
+                description: "Crispy chicken, lettuce, tomato and mayonnaise",
+                price: "₹89",
+            },
+
+            
+
+            {
+                category: "sandwich",
+                name: "Tortilla Sandwich",
+                description: "Chicken with fresh salad and sauce",
+                price: "₹139",
+            },
+
+
+            
+
+            {
+                category: "juice",
+                name: "Orange Juice",
+                description: "Freshly squeezed orange juice served chilled",
+                price: "₹60",
+            },
+
+            {
+                category: "juice",
+                name: "Mango Juice",
+                description: "Sweet and refreshing fresh mango juice",
+                price: "₹60",
+            },
+
+            {
+                category: "juice",
+                name: "Tender Juice",
+                description: "Fresh tender coconut water served chilled",
+                price: "₹60",
+            },
+
+            {
+                category: "juice",
+                name: "Pineapple Juice",
+                description: "Fresh pineapple juice served with ice",
+                price: "₹60",
+            },
+
+            {
+                category: "juice",
+                name: "Grape Juice",
+                description: "Fresh grape juice served chilled",
+                price: "₹60",
+            },
+
+            {
+                category: "juice",
+                name: "Beetroot Juice",
+                description: "Fresh beetroot juice blended and served chilled",
+                price: "₹60",
+                badge: "Popular"
+            },
+              {
+                category: "juice",
+                name: "Apple Juice",
+                description: "Refreshing blend of seasonal fruits",
+                price: "₹70",
+                
+            },
+               {
+                category: "juice",
+                name: "Mix Fruit Juice",
+                description: "Mix blend of seasonal fruits",
+                price: "₹70",
+                
+            },
+
+
+
+            
+
+            {
+                category: "shake",
+                name: "Chocolate Shake",
+                description: "Thick chocolate shake with chocolate syrup",
+                price: "₹70",
+            },
+
+            {
+                category: "shake",
+                name: "Tender Coconut Shake",
+                description: "Creamy milkshake blended with Tender Coconut ",
+                price: "₹70",
+                badge: "Best Seller"
+            },
+
+            {
+                category: "shake",
+                name: "Papaya Shake",
+                description: "Creamy papaya-flavoured milkshake",
+                price: "₹70",
+            },
+
+            {
+                category: "shake",
+                name: "Chikku Shake",
+                description: " blending ripe chikoo fruit with chilled milk ",
+                price: "₹70",
+            },
+
+            {
+                category: "shake",
+                name: "Mango Shake",
+                description: "Creamy mango shake with fresh flavour",
+                price: "₹70",
+            },
+
+            {
+                category: "shake",
+                name: "Dry Fruit Shake",
+                description: "Rich shake blended with nuts and dry fruits",
+                price: "₹110",
+            },
+                 {
+                category: "shake",
+                name: "Cocktail King Shake",
+                description: "Rich shake blended with nuts and dry fruits",
+                price: "₹80",
+            },
+                 {
+                category: "shake",
+                name: "Cashew Shake",
+                description: "Rich shake blended with nuts ",
+                price: "₹70",
+            },
+                   {
+                category: "shake",
+                name: "Khajur(Dates) Shake",
+                description: "Rich shake blended with nuts ",
+                price: "₹70",
+            },
+                        {
+                category: "shake",
+                name: "Sharjah Shake",
+                description: "Rich shake blended with nuts ",
+                price: "₹70",
+            },
+
+
+
+
+            
+
+            {
+                category: "lime",
+                name: "Fresh Lime",
+                description: "Fresh lemon juice with chilled water and ice",
+                price: "₹79",
+            },
+
+            {
+                category: "lime",
+                name: "Pineapple Lime",
+                description: "Fresh lime mixed with Pineapple ",
+                price: "₹20",
+            },
+
+            {
+                category: "lime",
+                name: "Mint Lime",
+                description: "Fresh lime blended with mint and ice",
+                price: "₹25",
+            },
+
+            {
+                category: "lime",
+                name: "Ginger Lime",
+                description: "Fresh lime mixed with ginger and ice",
+                price: "₹99",
+            },
+
+
+            
+
+            {
+                category: "mojito",
+                name: "Blue Mojito",
+                description: "Blue citrus drink with mint and ice",
+                price: "₹90",
+            },
+
+            {
+                category: "mojito",
+                name: "Passion Fruit Mojito",
+                description: "Refreshing passion fruit, mint and soda cooler",
+                price: "₹90",
+                badge: "Popular"
+            },
+
+            {
+                category: "mojito",
+                name: "Orange Mojito",
+                description: "Refreshing orange, mint and sparkling soda cooler",
+                price: "₹90",
+            },
+
+            {
+                category: "mojito",
+                name: "Green Apple Mojito",
+                description: "Green apple, mint and soda served chilled",
+                price: "₹90",
+            },
+              {
+                category: "mojito",
+                name: "Strawberry Mojito",
+                description: "Strawberry, mint and soda served chilled",
+                price: "₹90",
+            },
+
+
+
+            
+
+            {
+                category: "soda",
+                name: "Lemon Soda",
+                description: "Fresh lemon mixed with sparkling soda",
+                price: "₹25",
+            },
+
+            {
+                category: "soda",
+                name: "Chilly Soda",
+                description: "Chilled soda with a lively chilli kick",
+                price: "₹30",
+            },
+
+            {
+                category: "soda",
+                name: "Pineapple Soda",
+                description: "Fresh pineapple and chilled soda",
+                price: "₹50",
+            },
+
+            {
+                category: "soda",
+                name: "Blue Soda",
+                description: "Blue citrus-flavoured sparkling soda",
+                price: "₹50",
+            },
+             {
+                category: "soda",
+                name: "Green Mango Soda",
+                description: "Green mango-flavoured sparkling soda",
+                price: "₹50",
+            },
+              {
+                category: "soda",
+                name: "Grape Soda",
+                description: "Grape-flavoured sparkling soda",
+                price: "₹50",
+            },
+
+
+
+            
+
+            {
+                category: "icecream",
+                name: "Vanilla Ice Cream",
+                description: "Creamy vanilla ice cream served cold",
+                price: "₹60",
+            },
+
+            {
+                category: "icecream",
+                name: "Chocolate Ice Cream",
+                description: "Rich chocolate ice cream with chocolate sauce",
+                price: "₹60",
+            },
+
+            {
+                category: "icecream",
+                name: "Strawberry Ice Cream",
+                description: "Creamy strawberry-flavoured ice cream",
+                price: "₹60",
+            },
+
+            {
+                category: "icecream",
+                name: "Tender Ice Cream",
+                description: "Tender ice cream with crunchy nuts",
+                price: "₹60",
+            },
+
+
+            
+
+            {
+                category: "falooda",
+                name: "Royal Falooda",
+                description: "Ice cream, fruits, jelly, milk and sweet toppings",
+                price: "₹100",
+                badge: "Best Seller"
+            },
+
+            {
+                category: "falooda",
+                name: "Dry Fruit Falooda",
+                description: "Creamy falooda loaded with nuts and dry fruits",
+                price: "₹100",
+            },
+
+            {
+                category: "falooda",
+                name: "SP Falooda",
+                description: "SP Falooda and syrup",
+                price: "₹110",
+            },
+
+            {
+                category: "falooda",
+                name: "Arabian Falooda",
+                description: "  Arabian, milk, jelly and fruits",
+                price: "₹120",
+            },
+
+             {
+                category: "falooda",
+                name: "Fruit Custard",
+                description: " Fruit Custard,  jelly and fruits",
+                price: "₹60",
+            },
+
+
+
+            
+
+            {
+                category: "kulikki",
+                name: "Green Mango kulikki Sarbath",
+                description: "Green mango drink shaken with basil seeds and ice",
+                price: "₹50",
+            },
+
+            {
+                category: "kulikki",
+                name: "Boost kulikki Sarbath",
+                description: "Boost drink shaken with basil seeds and ice",
+                price: "₹50",
+            },
+
+            {
+                category: "kulikki",
+                name: "Passion Fruit Kulikki",
+                description: "Passion fruit drink shaken with basil seeds",
+                price: "₹50",
+            },
+            
+
+            {
+                category: "kulikki",
+                name: "Mosambi kulikki Sarbath",
+                description: "Mosambi, lemon, basil seeds and ice",
+                price: "₹50",
+            }
+            
+            
+
+        ];
+
+        const menuGrid = document.getElementById("menuGrid");
+
+
+        const menuImages = window.CHICK_BUCK_MENU_IMAGES || {};
+
+        const normalizedMenuImages = new Map(
+            Object.entries(menuImages).map(([itemName, filename]) => [
+                itemName.trim().toLocaleLowerCase(),
+                filename
+            ])
+        );
+
+        const tableNumberInput = document.getElementById("tableNumber");
+        const tableOrderPanel = document.getElementById("tableOrderPanel");
+        const deliveryOrderPanel = document.getElementById("deliveryOrderPanel");
+        const cart = new Map();
+        const cartItemsElement = document.getElementById("cartItems");
+        const cartCountElement = document.getElementById("cartCount");
+        const cartTotalElement = document.getElementById("cartTotal");
+        const cartButtonTotal = document.getElementById("cartButtonTotal");
+        const cartMessageElement = document.getElementById("cartMessage");
+        const cartPanel = document.getElementById("cartPanel");
+        const cartToggle = document.getElementById("cartToggle");
+        const orderReviewModal = document.getElementById("orderReviewModal");
+        const reviewItems = document.getElementById("reviewItems");
+        const reviewProductTotal = document.getElementById("reviewProductTotal");
+        const reviewTotal = document.getElementById("reviewTotal");
+        const reviewDeliveryFee = document.getElementById("reviewDeliveryFee");
+        const reviewPackingFee = document.getElementById("reviewPackingFee");
+        const reviewDeliveryFeeRow = document.getElementById("reviewDeliveryFeeRow");
+        const reviewPackingFeeRow = document.getElementById("reviewPackingFeeRow");
+        const orderAddons = document.getElementById("orderAddons");
+        const reviewOrderType = document.getElementById("reviewOrderType");
+        const reviewDelivery = document.getElementById("reviewDelivery");
+        const reviewCustomerName = document.getElementById("reviewCustomerName");
+        const reviewAddress = document.getElementById("reviewAddress");
+        const reviewPhone = document.getElementById("reviewPhone");
+
+        const pageParameters = new URLSearchParams(window.location.search);
+        const isBrowseOnly = pageParameters.get("mode") === "browse";
+        if (isBrowseOnly) {
+            document.body.classList.add("menu-browse-mode");
+            document.getElementById("menuModeLink").href = "menu.html";
+            document.getElementById("menuModeLink").textContent = "Place order";
+        } else {
+            document.getElementById("menuModeLink").href = "mainmenu.html";
+            document.getElementById("menuModeLink").textContent = "Browse Menu";
+        }
+
+        const tableFromQr = pageParameters.get("table");
+        const isTableOrder = Boolean(tableFromQr?.trim());
+        let deliveryLocation;
+        let deliveryQuote;
+        const getBill = (productTotal) => {
+            if (isTableOrder) return { productTotal, deliveryFee: 0, packingFee: 0, totalAmount: productTotal };
+            return { productTotal, deliveryFee: 0, packingFee: 0, totalAmount: productTotal };
+        };
+        const scrollToDeliveryDetails = (fieldToFocus) => {
+            closeCart();
+            deliveryOrderPanel.scrollIntoView({ behavior: "smooth", block: "center" });
+            window.setTimeout(() => fieldToFocus?.focus(), 450);
+        };
+        tableOrderPanel.hidden = !isTableOrder;
+        deliveryOrderPanel.hidden = isTableOrder;
+        if (isTableOrder) tableNumberInput.value = tableFromQr.trim().slice(0, 50);
+
+        const getNumericPrice = (price) => Number(String(price).replace(/[^0-9.]/g, ""));
+        const closeCart = () => {
+            cartPanel.classList.remove("is-open");
+            cartToggle.setAttribute("aria-expanded", "false");
+        };
+        const openCart = () => {
+            cartPanel.classList.add("is-open");
+            cartToggle.setAttribute("aria-expanded", "true");
+        };
+
+        const renderCart = () => {
+            const entries = [...cart.values()];
+            const count = entries.reduce((sum, item) => sum + item.quantity, 0);
+            const total = entries.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            cartCountElement.textContent = count;
+            cartTotalElement.textContent = `₹${total.toFixed(2)}`;
+            cartButtonTotal.textContent = `₹${total.toFixed(0)}`;
+            cartToggle.hidden = count === 0;
+            document.body.classList.toggle("has-active-cart", count > 0);
+            if (count === 0) closeCart();
+            cartItemsElement.innerHTML = entries.length
+                ? entries.map((item) => `
+                    <div class="cart-item">
+                        <div><strong>${item.name}</strong><span>₹${item.price.toFixed(2)} each</span></div>
+                        <div class="cart-quantity">
+                            <button aria-label="Remove one ${item.name}" data-cart-action="decrease" data-id="${item.id}" type="button">−</button>
+                            <span>${item.quantity}</span>
+                            <button aria-label="Add one ${item.name}" data-cart-action="increase" data-id="${item.id}" type="button">+</button>
+                        </div>
+                    </div>`).join("")
+                : "<p class=\"cart-empty\">Your cart is empty. Add a menu item to begin.</p>";
+        };
+
+        const changeQuantity = (id, change) => {
+            const item = cart.get(id);
+            if (!item) return;
+            item.quantity += change;
+            if (item.quantity <= 0) cart.delete(id);
+            renderCart();
+        };
+
+        menuItems.forEach((item, index) => {
+
+            const card = document.createElement("article");
+
+            card.className = "menu-card reveal-item";
+
+            card.dataset.category = item.category;
+
+
+            const imageFile =
+                menuImages[item.name] ??
+                normalizedMenuImages.get(
+                    item.name.trim().toLocaleLowerCase()
+                ) ??
+                "";
+
+            const imageMarkup = imageFile
+                ? `
+                    <img
+                        src="asset/image/${imageFile}"
+                        alt="${item.name}"
+                        decoding="async"
+                        loading="${index < 4 ? "eager" : "lazy"}"
+                        fetchpriority="${index < 2 ? "high" : "auto"}"
+                    >
+                `
+                : `
+                    <div class="menu-image-fallback" role="img" aria-label="${item.name} photo coming soon">
+                        <img src="asset/image/logo2.png" alt="" aria-hidden="true" width="500" height="500">
+                        <span>${item.name}</span>
+                    </div>
+                `;
+
+            const badge = item.badge
+                ? `<span class="menu-badge">${item.badge}</span>`
+                : "";
+
+            card.innerHTML = `
+
+                <div class="menu-card-image">
+
+                    ${imageMarkup}
+
+                    ${badge}
+
+                </div>
+
+
+                <div class="menu-card-content">
+
+                    <h2>${item.name}</h2>
+
+                    <p>${item.description}</p>
+
+                    <strong class="menu-price">
+                        ${item.price}
+                    </strong>
+
+                    ${isBrowseOnly
+                        ? '<a class="add-to-cart" href="menu.html">Place order</a>'
+                        : `<button class="add-to-cart" data-id="${item.id || `${item.category}-${index}`}" type="button">Add to order</button>`}
+
+                </div>
+
+            `;
+
+
+            menuGrid.appendChild(card);
+
+            if (isBrowseOnly) return;
+            card.querySelector(".add-to-cart").addEventListener("click", () => {
+                const id = item.id || ichefWebsiteProductIds[item.name] || `${item.category}-${index}`;
+                if (cart.has(id)) cart.get(id).quantity += 1;
+                else cart.set(id, { id, name: item.name, price: getNumericPrice(item.price), quantity: 1 });
+                cartMessageElement.textContent = "";
+                renderCart();
+            });
+
+        });
+
+        cartItemsElement.addEventListener("click", (event) => {
+            const button = event.target.closest("[data-cart-action]");
+            if (!button) return;
+            changeQuantity(button.dataset.id, button.dataset.cartAction === "increase" ? 1 : -1);
+        });
+        cartToggle.addEventListener("click", () => cartPanel.classList.contains("is-open") ? closeCart() : openCart());
+        document.getElementById("cartClose").addEventListener("click", closeCart);
+
+        const deliveryLocationStatus = document.getElementById("deliveryLocationStatus");
+        const useMyLocationButton = document.getElementById("useMyLocation");
+        const deliveryAddressInput = document.getElementById("deliveryAddress");
+        const deliveryPrivacyConsent = document.getElementById("deliveryPrivacyConsent");
+        const fillAddressFromGps = async ({ latitude, longitude }) => {
+            // GPS gives coordinates, so reverse geocoding turns them into a
+            // useful starting address. A customer must still confirm house/flat details.
+            if (deliveryAddressInput.value.trim()) return;
+            try {
+                const params = new URLSearchParams({
+                    format: "jsonv2",
+                    lat: latitude,
+                    lon: longitude,
+                    zoom: "18",
+                    addressdetails: "1",
+                    "accept-language": navigator.language || "en"
+                });
+                const response = await fetch(`https://nominatim.openstreetmap.org/reverse?${params}`);
+                if (!response.ok) return;
+                const locationAddress = await response.json();
+                if (!locationAddress.display_name) return;
+                deliveryAddressInput.value = locationAddress.display_name;
+                deliveryLocationStatus.textContent += " Address filled from GPS — please add or correct your house/flat number.";
+            } catch {
+                // Location itself remains valid even when an address lookup is unavailable.
+            }
+        };
+        const requestDeliveryLocation = () => {
+            // Browsers protect location data: a customer must approve the
+            // browser prompt, and non-localhost deployments need HTTPS.
+            if (!window.isSecureContext && location.hostname !== "localhost") {
+                deliveryLocationStatus.textContent = "Location requires the secure HTTPS website. This local Wi-Fi test link cannot access phone GPS.";
+                return;
+            }
+            deliveryQuote = undefined;
+            if (!navigator.geolocation) {
+                deliveryLocationStatus.textContent = "Location is unavailable in this browser.";
+                return;
+            }
+            deliveryLocationStatus.textContent = "Checking your location…";
+            navigator.geolocation.getCurrentPosition(async ({ coords }) => {
+                deliveryLocation = { latitude: coords.latitude, longitude: coords.longitude };
+                fillAddressFromGps(deliveryLocation);
+                try {
+                    const response = await fetch(`${window.CHICK_BUCK_API_URL}/api/delivery/quote`, {
+                        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(deliveryLocation)
+                    });
+                    const responseBody = await response.text();
+                    let quote;
+                    try { quote = JSON.parse(responseBody); } catch { throw new Error(`The delivery service returned HTTP ${response.status}.`); }
+                    if (!response.ok) throw new Error(quote.error || `The delivery service returned HTTP ${response.status}.`);
+                    if (!quote.available) {
+                        deliveryLocation = undefined;
+                        deliveryLocationStatus.textContent = "Sorry, Chick Buck doesn't deliver to your location yet.";
+                        return;
+                    }
+                    deliveryQuote = quote;
+                    deliveryLocationStatus.textContent = `${quote.outlet.name} will deliver to you (${quote.distanceKm} km away).`;
+                } catch (error) {
+                    deliveryLocation = undefined;
+                    deliveryQuote = undefined;
+                    deliveryLocationStatus.textContent = error.message === "Failed to fetch"
+                        ? "Cannot reach the Chick Buck delivery service. Keep the backend running and make sure this phone uses the same Wi-Fi."
+                        : error.message;
+                }
+            }, () => {
+                deliveryLocationStatus.textContent = "Location permission was not granted. Please allow it to check delivery availability.";
+            }, { enableHighAccuracy: true, timeout: 10000, maximumAge: 300000 });
+        };
+        useMyLocationButton.addEventListener("click", requestDeliveryLocation);
+        // Ask automatically for delivery visitors. The browser still controls
+        // the permission prompt; table QR orders never request GPS.
+        if (!isTableOrder) requestDeliveryLocation();
+
+        const openReview = () => {
+            const items = [...cart.values()];
+            const tableNumber = tableNumberInput.value.trim();
+            const totalAmount = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            if (isTableOrder && !tableNumber) {
+                cartMessageElement.textContent = "Enter your table number before continuing.";
+                closeCart();
+                tableOrderPanel.scrollIntoView({ behavior: "smooth", block: "center" });
+                tableNumberInput.focus();
+                return;
+            }
+            if (!items.length) {
+                cartMessageElement.textContent = "Add at least one menu item first.";
+                return;
+            }
+            const deliveryDetails = isTableOrder ? undefined : {
+                customerName: document.getElementById("deliveryName").value.trim(),
+                phone: document.getElementById("deliveryPhone").value.trim(),
+                address: document.getElementById("deliveryAddress").value.trim(),
+                ...deliveryLocation
+            };
+            if (!isTableOrder && (!deliveryDetails.customerName || !deliveryDetails.phone || !deliveryDetails.address || !deliveryLocation || !deliveryPrivacyConsent.checked)) {
+                cartMessageElement.textContent = "Complete delivery details, location and privacy consent before continuing.";
+                const firstMissingField = !deliveryDetails.customerName
+                    ? document.getElementById("deliveryName")
+                    : !deliveryDetails.phone
+                        ? document.getElementById("deliveryPhone")
+                        : !deliveryDetails.address
+                            ? document.getElementById("deliveryAddress")
+                            : !deliveryLocation
+                                ? useMyLocationButton
+                                : deliveryPrivacyConsent;
+                scrollToDeliveryDetails(firstMissingField);
+                return;
+            }
+
+            const bill = getBill(totalAmount);
+            reviewItems.innerHTML = items.map((item) => `<div><span>${item.quantity} × ${item.name}</span><strong>₹${(item.price * item.quantity).toFixed(2)}</strong></div>`).join("");
+            reviewProductTotal.textContent = `₹${bill.productTotal.toFixed(2)}`;
+            reviewDeliveryFee.textContent = "FREE";
+            reviewPackingFee.textContent = "FREE";
+            reviewTotal.textContent = `₹${bill.totalAmount.toFixed(2)}`;
+            reviewDeliveryFeeRow.hidden = isTableOrder;
+            reviewPackingFeeRow.hidden = isTableOrder;
+            reviewOrderType.textContent = isTableOrder ? `Table order · Table ${tableNumber}` : "Delivery order";
+            reviewDelivery.hidden = isTableOrder;
+            if (!isTableOrder) {
+                reviewCustomerName.textContent = deliveryDetails.customerName;
+                reviewAddress.textContent = deliveryDetails.address;
+                reviewPhone.textContent = deliveryDetails.phone;
+            }
+            orderReviewModal.classList.add("is-open");
+            orderReviewModal.setAttribute("aria-hidden", "false");
+        };
+        document.getElementById("checkoutButton").addEventListener("click", openReview);
+        document.getElementById("closeReview").addEventListener("click", () => { orderReviewModal.classList.remove("is-open"); orderReviewModal.setAttribute("aria-hidden", "true"); });
+        document.getElementById("confirmOrderButton").addEventListener("click", async () => {
+            const items = [...cart.values()];
+            const tableNumber = tableNumberInput.value.trim();
+            const totalAmount = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const selectedAddons = [...document.querySelectorAll(".addon-options input:checked")].map((input) => input.value);
+            const typedRequest = orderAddons.value.trim();
+            const specialRequests = [...selectedAddons, typedRequest].filter(Boolean).join(", ");
+            const deliveryDetails = isTableOrder ? undefined : {
+                customerName: document.getElementById("deliveryName").value.trim(),
+                phone: document.getElementById("deliveryPhone").value.trim(),
+                address: document.getElementById("deliveryAddress").value.trim(),
+                specialRequests,
+                ...deliveryLocation
+            };
+
+            const checkoutButton = document.getElementById("confirmOrderButton");
+            checkoutButton.disabled = true;
+            checkoutButton.textContent = "Creating order…";
+            cartMessageElement.textContent = "";
+            try {
+                const response = await fetch(`${window.CHICK_BUCK_API_URL}/api/orders`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        orderType: isTableOrder ? "TABLE" : "DELIVERY",
+                        ...(isTableOrder ? { tableNumber } : { deliveryDetails }),
+                        items: items.map(({ id, quantity, price }) => ({ id, quantity, price })),
+                        totalAmount: Number(totalAmount.toFixed(2))
+                    })
+                });
+                const result = await response.json();
+                if (!response.ok) throw new Error(result.error || "Unable to create the order.");
+                cartMessageElement.textContent = result.ichefOrder
+                    ? `Order ${result.transactionId} sent to iChef using ${result.wbSlot}. KOT ${result.kotNumber}: check the kitchen and iChef screen.`
+                    : result.testOrder
+                        ? `Test order sent to iChef using ${result.wbSlot}. Check the kitchen and iChef screen.`
+                        : `Order ${result.orderId} created. Razorpay checkout will open after payment keys are configured.`;
+            } catch (error) {
+                cartMessageElement.textContent = error.message === "Failed to fetch"
+                    ? "The ordering API is unavailable. Confirm it is running on port 3000."
+                    : error.message;
+            } finally {
+                checkoutButton.disabled = false;
+                checkoutButton.textContent = "Place order";
+            }
+        });
+        renderCart();
+
+    </script>
+<script src="asset/js/main.js?v=20260910-delivery-location-3"></script>
+</body>
+</html>

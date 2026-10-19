@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="0; url=menu.html?mode=browse">
+  <title>Chick Buck Menu</title>
+</head>
+<body>
+  <p>Opening the <a href="menu.html?mode=browse">Chick Buck menu</a>…</p>
+</body>
+</html>
