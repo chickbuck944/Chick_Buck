@@ -4,12 +4,12 @@
 window.CHICK_BUCK_SEASONAL = Object.freeze({
    
   
-    enabled: true,
+    enabled: false,
     startDate: "2026-10-19",
     endDate: "2027-01-31",
 
     heroCarousel: {
-        enabled: true,
+        enabled: false,
         intervalSeconds: 10
     },
 
