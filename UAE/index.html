@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="chickbucksmall.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChickBuck — Coming Soon</title>
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #F5EBD9;  
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ===== BACKGROUND SHAPES ===== */
+        .bg-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 8px;
+            opacity: 0.85;
+        }
+
+        .shape-1 {
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(135deg, #8B0000, #a00020);
+            top:60%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            animation: float1 6s ease-in-out infinite;
+        }
+
+        .shape-2 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #a00020, #cc0033);
+            top: 60%;
+            left: 60%;
+            transform: translate(-50%, -50%) rotate(30deg);
+            animation: float2 7s ease-in-out infinite;
+        }
+
+        .shape-3 {
+            width: 280px;
+            height: 280px;
+            background: linear-gradient(135deg, #cc0033, #e60044);
+            top: 60%;
+            left: 25%;
+            transform: translate(-50%, -50%) rotate(60deg);
+            animation: float3 8s ease-in-out infinite;
+        }
+
+        .shape-4 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #660000, #8B0000);
+            top: 50%;
+            left: 20%;
+            transform: rotate(45deg);
+            animation: float4 5s ease-in-out infinite;
+        }
+
+        .shape-5 {
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(135deg, #e60044, #ff1a5c);
+            top: 60%;
+            left: 70%;
+            transform: rotate(30deg);
+            animation: float5 6.5s ease-in-out infinite;
+        }
+
+        /* Floating Animations */
+        @keyframes float1 {
+            0%, 100% { transform: translate(-50%, -50%) rotate(45deg) scale(1); }
+            50% { transform: translate(-50%, -50%) rotate(50deg) scale(1.05); }
+        }
+
+        @keyframes float2 {
+            0%, 100% { transform: translate(-50%, -50%) rotate(30deg) scale(1); }
+            50% { transform: translate(-50%, -50%) rotate(25deg) scale(1.08); }
+        }
+
+        @keyframes float3 {
+            0%, 100% { transform: translate(-50%, -50%) rotate(60deg) scale(1); }
+            50% { transform: translate(-50%, -50%) rotate(65deg) scale(1.03); }
+        }
+
+        @keyframes float4 {
+            0%, 100% { transform: rotate(45deg) translate(0, 0); }
+            50% { transform: rotate(50deg) translate(10px, -15px); }
+        }
+
+        @keyframes float5 {
+            0%, 100% { transform: rotate(30deg) translate(0, 0); }
+            50% { transform: rotate(35deg) translate(-10px, 10px); }
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 4px;
+        }
+
+        /* ===== LOGO ===== */
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: px;
+            margin-bottom: 30px;
+            animation: logoFadeIn 1s ease-out 0.3s both;
+        }
+
+        
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+          
+            object-fit: contain;
+      
+        }
+
+   
+
+        @keyframes logoFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes logoPulse {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(204, 0, 51, 0.4);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 35px rgba(204, 0, 51, 0.7);
+                transform: scale(1.08);
+            }
+        }
+
+        /* ===== COMING SOON TEXT ===== */
+        .coming-soon {
+            font-size: 5rem;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: slideUp 1s ease-out 0.8s both;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== TAGLINE ===== */
+        .tagline {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.6;
+            animation: fadeIn 1s ease-out 1.3s both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* ===== DECORATIVE LINE ===== */
+        .divider {
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ff4d6d, transparent);
+            margin: 25px auto;
+            animation: expandLine 1s ease-out 1.6s forwards;
+        }
+
+        @keyframes expandLine {
+            to {
+                width: 200px;
+            }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .coming-soon {
+                font-size: 3rem;
+            }
+
+            .logo-text {
+                font-size: 1.6rem;
+            }
+
+            .logo-icon {
+                width: 100%;
+                height: 100%;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            .shape-1 { width: 250px; height: 250px; }
+            .shape-2 { width: 220px; height: 220px; }
+            .shape-3 { width: 200px; height: 200px; }
+        }
+
+        @media (max-width: 480px) {
+            .coming-soon {
+                font-size: 2.2rem;
+            }
+
+            .logo-text {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animated Background Shapes -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Logo -->
+        <div class="logo">
+            <div class="logo-icon">
+                <!-- Chicken SVG Icon -->
+                <img src="chickbuck-logo.png" alt="chickbuck">
+                    <path d="M32 8c-2 0-4 1-5 3-1-1-3-2-5-2-4 0-7 3-7 7 0 3 2 5 4 6-1 2-2 4-2 7 0 8 6 15 15 15s15-7 15-15c0-3-1-5-2-7 2-1 4-3 4-6 0-4-3-7-7-7-2 0-4 1-5 2-1-2-3-3-5-3z"/>
+                    <circle cx="28" cy="22" r="2" fill="#cc0033"/>
+                    <path d="M20 12c-2-2-1-5 1-6 1 0 2 1 2 2 0 2-1 3-3 4z" fill="#ffcc00"/>
+                    <path d="M44 12c2-2 1-5-1-6-1 0-2 1-2 2 0 2 1 3 3 4z" fill="#ffcc00"/>
+                </svg>
+            </div>
+            <span class="logo-text"></span>
+        </div>
+
+        <!-- Coming Soon Headline -->
+        <h1 class="coming-soon">Coming Soon</h1>
+
+        <!-- Divider -->
+        <div class="divider"></div>
+
+        <!-- Tagline -->
+        <p class="tagline">A revolutionary platform for poultry-powered finance — launching soon</p>
+
+    </div>
+
+    <!-- Optional: Particle Effect Script -->
+    <script>
+        // Add subtle floating particles
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.style.cssText = `
+                position: fixed;
+                width: ${Math.random() * 6 + 2}px;
+                height: ${Math.random() * 6 + 2}px;
+                background: rgba(255, 255, 255, ${Math.random() * 0.3 + 0.1});
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 0;
+                left: ${Math.random() * 100}vw;
+                top: 100vh;
+                animation: particleRise ${Math.random() * 8 + 6}s linear forwards;
+            `;
+            document.body.appendChild(particle);
+
+            setTimeout(() => particle.remove(), 14000);
+        }
+
+        // Add particle animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes particleRise {
+                0% {
+                    transform: translateY(0) translateX(0);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-110vh) translateX(${Math.random() > 0.5 ? '' : '-'}${Math.random() * 100}px);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Spawn particles periodically
+        setInterval(createParticle, 400);
+    </script>
+
+</body>
+</html>

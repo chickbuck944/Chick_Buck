@@ -26,7 +26,7 @@ window.CHICK_BUCK_MENU_IMAGES = Object.freeze({
 
     // Sandwiches
     "CB Special Sandwich": "sandwich.png",
-    "Tortilla Sandwich": null,
+    "Tortilla Sandwich": "tortilla-sandwich.jpeg",
 
     // Fresh juice
     "Orange Juice": "Orange juice.png",

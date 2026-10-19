@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chick Buck Admin Login</title>
+  <!-- Load Supabase Library -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body class="admin-login-body">
+  <div class="login-card">
+    <h1>CHICK BUCK <span>ADMIN</span></h1>
+    <p>Secure Management Portal</p>
+    <form id="loginForm">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="adminEmail" required placeholder="admin@example.com">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="adminPassword" required>
+      </div>
+      <button type="submit" class="btn-primary" id="loginBtn">Login</button>
+      <p id="loginError" class="error-msg"></p>
+    </form>
+  </div>
+
+  <script>
+    // --- CONFIGURATION ---
+    // Replace these with your actual Supabase keys
+    const SB_URL = 'https://fnqzyjwtkhvswczppbqu.supabase.co'; 
+    const SB_KEY = 'sb_publishable_rhDvNmXvmdHKVkYH1TumLA_VasvU1Uh'; 
+    
+    // Initialize Supabase client using a unique name 'sbClient'
+    const sbClient = window.supabase.createClient(SB_URL, SB_KEY);
+
+    // Check if already logged in
+    sbClient.auth.getSession().then(({ data: { session } }) => {
+      if (session) {
+        window.location.href = '/admin/';
+      }
+    });
+
+    // Handle Login Form
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('loginBtn');
+      const errorMsg = document.getElementById('loginError');
+      
+      btn.textContent = 'Authenticating...';
+      btn.disabled = true;
+      errorMsg.textContent = '';
+
+      const email = document.getElementById('adminEmail').value;
+      const password = document.getElementById('adminPassword').value;
+
+      const { data, error } = await sbClient.auth.signInWithPassword({ email, password });
+
+      if (error) {
+        errorMsg.textContent = error.message;
+        btn.textContent = 'Login';
+        btn.disabled = false;
+      } else {
+        window.location.href = '/admin/';
+      }
+    });
+  </script>
+</body>
+</html>

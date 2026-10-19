@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#250506">
+  <meta name="description" content="Chick Buck — The Unique Taste Of Saudi Arabia. Order crispy chicken, burgers, sandwiches and more from our Jeddah branches.">
+  <title id="siteTitle">Chick Buck — The Unique Taste Of Saudi Arabia</title>
+  <link rel="icon" type="image/png" href="assets/chickbucksmall.png" id="siteFavicon">
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700;800&family=Cairo:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Vercel Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Theme CSS injection point -->
+  <style id="themeStyle"></style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PAGE LOADER
+══════════════════════════════════════════════════════════════ -->
+<div class="loader-overlay" id="pageLoader">
+  <video class="loader-video" autoplay muted playsinline>
+    <source src="assets/loader-video.mp4" type="video/mp4">
+    <div class="loader-fallback">CB</div>
+  </video>
+</div>
+
+<!-- Grain Texture -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ANNOUNCEMENT BAR (injected by JS)
+══════════════════════════════════════════════════════════════ -->
+<div id="announcementBar" class="announcement-bar hidden" role="marquee"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HOME VIEW
+══════════════════════════════════════════════════════════════ -->
+<main id="homeView" class="view active">
+  <!-- ═══════════════════════════════════════════════════════
+       DYNAMIC HOMEPAGE SECTIONS (rendered by JS in exact order)
+  ════════════════════════════════════════════════════════════ -->
+  <div id="homepageSections">
+    <!-- Sections injected here by renderHomepage() based on Admin drag order -->
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════════════════
+     MENU VIEW
+══════════════════════════════════════════════════════════════ -->
+<main id="menuView" class="view">
+
+  <!-- Top Cart Bar -->
+  <div class="top-cart-bar" id="topCartBar">
+    <div class="top-cart-info">
+      <span class="cart-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-badge" id="topCartBadge">0</span>
+      </span>
+      <div>
+        <p class="top-cart-label" data-i18n="yourCart">Your Cart</p>
+        <p class="top-cart-total">
+          <span id="topCartCount">0</span> <span data-i18n="items">items</span>
+          · <span id="topCartTotal">0.00</span> <span class="sr-label" id="currencyLabel">SR</span>
+        </p>
+      </div>
+    </div>
+    <button class="view-cart-btn" id="viewCartBtn" data-i18n="viewCart">View Cart</button>
+  </div>
+
+  <!-- Menu Header -->
+  <header class="menu-header">
+    <button class="back-btn" id="backBtn" aria-label="Back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </button>
+    <div class="header-logo">
+      <img src="assets/chickbuck-logo.png" alt="Chick Buck" id="menuLogoImg" onerror="this.style.display='none'">
+    </div>
+    <button class="lang-toggle lang-toggle-sm" id="langToggleMenu" aria-label="Toggle language">
+      <span class="lang-en">عربي</span>
+      <span class="lang-ar">EN</span>
+    </button>
+  </header>
+
+  <!-- Branch Info Card -->
+  <div class="branch-info-card" id="branchInfoCard">
+    <div class="bic-left">
+      <div class="bic-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+        </svg>
+      </div>
+      <div>
+        <p class="bic-label" data-i18n="orderingFrom">Ordering from</p>
+        <h4 id="bicName">—</h4>
+      </div>
+    </div>
+    <a href="#" class="bic-phone" id="bicPhone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+      </svg>
+      <span id="bicPhoneNum">—</span>
+    </a>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="search-wrap">
+    <div class="search-bar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+      </svg>
+      <input type="text" id="searchInput" data-i18n-placeholder="searchMenu" placeholder="Search the menu...">
+    </div>
+  </div>
+
+  <!-- Category Tabs -->
+  <div class="category-tabs" id="categoryTabs">
+    <button class="cat-tab active" data-cat="all" data-i18n="catAll">All</button>
+    <!-- Dynamic categories injected by JS -->
+  </div>
+
+  <!-- Items Counter -->
+  <p class="items-counter">
+    <span data-i18n="showing">Showing</span>
+    <span id="shownCount">0</span>
+    <span data-i18n="of">of</span>
+    <span id="totalCount">0</span>
+    <span data-i18n="items">items</span>
+  </p>
+
+  <!-- Products Grid -->
+  <div class="products-grid" id="productsGrid"></div>
+
+  <!-- Spacer for bottom bar -->
+  <div style="height: 120px;"></div>
+
+  <!-- Bottom Order Bar -->
+  <div class="bottom-order-bar" id="bottomOrderBar">
+    <div class="bob-info">
+      <p class="bob-count"><span id="bobCount">0</span> <span data-i18n="items">items</span></p>
+      <p class="bob-total"><span id="bobTotal">0.00</span> <span class="sr-label">SR</span></p>
+    </div>
+    <button class="place-order-btn" id="placeOrderBtn" disabled>
+      <span data-i18n="placeOrder">Place Order</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </button>
+  </div>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PRODUCT MODAL
+══════════════════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="productModal">
+  <div class="modal product-modal">
+    <button class="modal-close" id="productModalClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="pm-image-wrap">
+      <img id="pmImage" src="" alt="">
+      <span class="pm-badge" id="pmBadge"></span>
+    </div>
+    <div class="pm-rating">
+      <span class="stars" id="pmStars">★★★★★</span>
+      <span class="rating-num" id="pmRating">4.8</span>
+    </div>
+    <h3 class="pm-name" id="pmName">—</h3>
+    <div class="pm-divider"><span></span><span class="dot">◆</span><span></span></div>
+    <p class="pm-desc" id="pmDesc">—</p>
+    <p class="pm-calories" id="pmCalories">🔥 0 cal</p>
+    <div class="pm-sizes" id="pmSizes" style="display:none;">
+      <p class="pm-section-label" data-i18n="chooseSize">Choose Size</p>
+      <div class="pm-size-options" id="pmSizeOptions"></div>
+    </div>
+    <div class="pm-price-row">
+      <div class="pm-price" id="pmPrice">0 <span class="sr-label">SR</span></div>
+      <div class="qty-selector">
+        <button id="pmQtyMinus" aria-label="Decrease">−</button>
+        <span id="pmQty">1</span>
+        <button id="pmQtyPlus" aria-label="Increase">+</button>
+      </div>
+    </div>
+    <button class="pm-add-btn" id="pmAddBtn" data-i18n="addToCart">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/>
+      </svg>
+      Add to Cart
+    </button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CART MODAL
+══════════════════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="cartModal">
+  <div class="modal cart-modal">
+    <div class="cm-header">
+      <div>
+        <h3 data-i18n="yourOrder">Your Order</h3>
+        <p class="cm-subtitle">Review your selection</p>
+      </div>
+      <button class="modal-close" id="cartModalClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="cm-items" id="cartItems">
+      <div class="cm-empty" id="cartEmpty">
+        <div class="cm-empty-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" width="50" height="50">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/>
+          </svg>
+        </div>
+        <p data-i18n="cartEmpty">Your cart is empty</p>
+      </div>
+    </div>
+
+    <!-- Order Type -->
+    <div class="order-type-section">
+      <p class="section-label" data-i18n="orderType">Order Type</p>
+      <div class="order-type-options">
+        <label class="order-type-option active" data-type="parcel">
+          <input type="radio" name="orderType" value="parcel" checked>
+          <span class="option-icon">🛍️</span>
+          <span class="option-text" data-i18n="parcel">Parcel (Pickup)</span>
+        </label>
+        <label class="order-type-option" data-type="delivery">
+          <input type="radio" name="orderType" value="delivery">
+          <span class="option-icon">🛵</span>
+          <span class="option-text" data-i18n="delivery">Delivery</span>
+          <span class="option-extra">+5 SR</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Delivery Details -->
+    <div class="delivery-details" id="deliveryDetails" style="display: none;">
+      <div class="form-group">
+        <label data-i18n="buildingName">Building / Flat Name</label>
+        <input type="text" id="custBuilding" class="form-input">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label data-i18n="floor">Floor</label>
+          <input type="text" id="custFloor" class="form-input">
+        </div>
+        <div class="form-group">
+          <label data-i18n="roomNumber">Room / Unit</label>
+          <input type="text" id="custRoom" class="form-input">
+        </div>
+      </div>
+    </div>
+
+    <!-- Total -->
+    <div class="cm-total">
+      <span data-i18n="total">Total</span>
+      <strong><span id="cmTotal">0.00</span> <span class="sr-label">SR</span></strong>
+    </div>
+
+    <!-- Customer Form -->
+    <form class="cm-form" id="customerForm">
+      <div class="form-group">
+        <label data-i18n="yourName">Your Name</label>
+        <input type="text" id="custName" class="form-input" required>
+      </div>
+      <div class="form-group">
+        <label data-i18n="phone">Phone</label>
+        <input type="tel" id="custPhone" class="form-input" required>
+      </div>
+      <div class="form-group">
+        <label data-i18n="notes">Notes (optional)</label>
+        <textarea id="custNotes" class="form-input" rows="2"></textarea>
+      </div>
+    </form>
+
+    <!-- WhatsApp Button -->
+    <button class="wa-btn" id="sendWhatsAppBtn">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+        <path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.3.3-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.4c.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.5-.4-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/>
+      </svg>
+      <span data-i18n="sendWhatsApp">Send Order via WhatsApp</span>
+    </button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     BRANCH SELECT MODAL (Homepage product click)
+══════════════════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="branchSelectModal">
+  <div class="branch-select-modal">
+    <button class="modal-close" id="branchSelectClose" aria-label="Close"
+      style="position:absolute;top:16px;right:16px;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="bsm-header">
+      <div class="bsm-icon">🍗</div>
+      <h3 class="bsm-title" id="bsmTitle">Select a Branch</h3>
+      <p class="bsm-subtitle" id="bsmSubtitle">Choose your nearest branch to order</p>
+    </div>
+    <div class="bsm-product-preview" id="bsmProductPreview">
+      <img class="bsm-product-img" id="bsmProductImg" src="" alt="">
+      <div>
+        <div class="bsm-product-name" id="bsmProductName">—</div>
+        <div class="bsm-product-price" id="bsmProductPrice">—</div>
+      </div>
+    </div>
+    <div class="bsm-branches" id="bsmBranches">
+      <!-- Injected by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+</body>
+</html>

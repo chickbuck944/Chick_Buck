@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chick Buck Admin</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+
+<body>
+
+  <!-- Mobile overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleMobileMenu()"></div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+     SIDEBAR
+══════════════════════════════════════════════════════════════ -->
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <div class="logo-icon">CB</div>
+          <div>
+            <div class="logo-title">CHICK BUCK</div>
+            <div class="logo-sub">Admin Panel</div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-label">Management</div>
+        <a class="nav-link active" data-view="dashboard">
+          <span class="nav-icon">📊</span> Dashboard
+        </a>
+        <a class="nav-link" data-view="orders">
+          <span class="nav-icon">📋</span> Orders
+        </a>
+        <a class="nav-link" data-view="products-manage">
+          <span class="nav-icon">🍗</span> Products
+        </a>
+
+        <div class="nav-section-label">Content</div>
+        <a class="nav-link" data-view="banners">
+          <span class="nav-icon">🖼️</span> Offers & Banners
+        </a>
+        <a class="nav-link" data-view="homepage-builder">
+          <span class="nav-icon">🏠</span> Homepage Builder
+        </a>
+        <a class="nav-link" data-view="theme">
+          <span class="nav-icon">🎨</span> Theme & Colors
+        </a>
+        <a class="nav-link" data-view="website-settings">
+          <span class="nav-icon">⚙️</span> Website Settings
+        </a>
+
+        <div class="nav-section-label">Analytics</div>
+        <a class="nav-link" data-view="products">
+          <span class="nav-icon">📈</span> Product Analytics
+        </a>
+        <a class="nav-link" data-view="reports">
+          <span class="nav-icon">📉</span> Reports
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="#" class="sidebar-logout" id="logoutBtn">
+          <span>🚪</span> Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════════════════════ -->
+    <div class="main-wrapper">
+
+      <!-- Header -->
+      <header class="admin-header">
+        <div class="header-left">
+          <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+              <path d="M3 12h18M3 6h18M3 18h18" />
+            </svg>
+          </button>
+          <h1 class="page-title" id="pageTitle">Dashboard</h1>
+        </div>
+        <div class="header-right">
+          <a href="/" target="_blank" class="header-preview-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+            </svg>
+            View Site
+          </a>
+        </div>
+      </header>
+
+      <main class="main-content">
+
+        <!-- ── DASHBOARD ── -->
+        <div id="view-dashboard" class="view-section">
+          <div class="stats-grid" id="statsGrid"></div>
+          <div class="card" style="margin-top:1.5rem;">
+            <div class="card-header">
+              <h2 class="card-title">Recent Orders</h2>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Order #</th>
+                    <th>Branch</th>
+                    <th>Customer</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Time</th>
+                  </tr>
+                </thead>
+                <tbody id="recentOrdersTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── ORDERS ── -->
+        <div id="view-orders" class="view-section" style="display:none;">
+          <div class="filters-bar">
+            <input type="text" id="searchOrder" class="filter-input" placeholder="Search order #, name or phone...">
+            <select id="filterBranch" class="filter-select">
+              <option value="all">All Branches</option>
+              <option value="branch1">Branch 1 — Ameerfawaz</option>
+              <option value="branch2">Branch 2 — AI-Samer</option>
+            </select>
+            <select id="filterStatus" class="filter-select">
+              <option value="all">All Statuses</option>
+              <option value="New">New</option>
+              <option value="Confirmed">Confirmed</option>
+              <option value="Preparing">Preparing</option>
+              <option value="Ready">Ready</option>
+              <option value="Completed">Completed</option>
+              <option value="Cancelled">Cancelled</option>
+            </select>
+          </div>
+          <div class="card">
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Order #</th>
+                    <th>Date</th>
+                    <th>Branch</th>
+                    <th>Customer</th>
+                    <th>Type</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="allOrdersTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PRODUCTS MANAGEMENT ── -->
+        <div id="view-products-manage" class="view-section" style="display:none;">
+          <div class="view-toolbar">
+            <h2 class="view-title">Manage Products</h2>
+            <button onclick="showAddProductForm()" class="btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+              Add Product
+            </button>
+          </div>
+          <div class="filters-bar">
+            <select id="filterProductBranch" class="filter-select">
+              <option value="all">All Branches</option>
+              <option value="branch1">Branch 1</option>
+              <option value="branch2">Branch 2</option>
+            </select>
+            <select id="filterProductCategory" class="filter-select">
+              <option value="all">All Categories</option>
+              <option value="BROASTED">Broasted</option>
+              <option value="SANDWICHES">Sandwiches</option>
+              <option value="BURGERS">Burgers</option>
+              <option value="SIDES">Sides</option>
+              <option value="MEALS">Meals</option>
+              <option value="LOADED">Loaded</option>
+              <option value="CLUBS">Clubs</option>
+              <option value="COLD DRINKS">Cold Drinks</option>
+            </select>
+          </div>
+          <div id="productsList" class="products-grid-admin"></div>
+        </div>
+
+        <!-- ── OFFERS & BANNERS ── -->
+        <div id="view-banners" class="view-section" style="display:none;">
+          <div class="view-toolbar">
+            <h2 class="view-title">Offers & Banners</h2>
+            <button onclick="showBannerForm()" class="btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+              Add Banner
+            </button>
+          </div>
+          <div class="alert-info">
+            💡 Banners appear in the homepage carousel. Desktop and mobile images are supported separately. Banners can
+            be scheduled with start/end dates.
+          </div>
+          <div id="bannersList" class="banners-list"></div>
+        </div>
+
+        <!-- ── HOMEPAGE BUILDER ── -->
+        <div id="view-homepage-builder" class="view-section" style="display:none;">
+          <div class="view-toolbar">
+            <h2 class="view-title">Homepage Builder</h2>
+            <button onclick="saveHomepageOrder()" class="btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z" />
+                <polyline points="17 21 17 13 7 13 7 21" />
+                <polyline points="7 3 7 8 15 8" />
+              </svg>
+              Save Order
+            </button>
+          </div>
+          <div class="alert-info">
+            💡 Drag to reorder sections, toggle to show/hide them. Changes are saved to the database and reflect on the
+            customer website immediately.
+          </div>
+          <div id="homepageSectionsList" class="sections-list"></div>
+        </div>
+
+        <!-- ── THEME & COLORS ── -->
+        <div id="view-theme" class="view-section" style="display:none;">
+          <div class="view-toolbar">
+            <h2 class="view-title">Theme & Colors</h2>
+            <div style="display:flex;gap:8px;">
+              <button onclick="resetTheme()" class="btn-secondary">Reset</button>
+              <button onclick="saveTheme()" class="btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                  <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z" />
+                </svg>
+                Save Theme
+              </button>
+            </div>
+          </div>
+
+          <!-- Presets -->
+          <div class="card" style="margin-bottom:1.5rem;">
+            <div class="card-header">
+              <h3 class="card-title">Theme Presets</h3>
+            </div>
+            <div class="preset-grid">
+              <button class="preset-btn active" onclick="applyPreset('chick-buck-classic')"
+                data-preset="chick-buck-classic">
+                <div class="preset-swatch" style="background:linear-gradient(135deg,#C4323A,#250506)"></div>
+                <span>Chick Buck Classic</span>
+              </button>
+              <button class="preset-btn" onclick="applyPreset('premium-red')" data-preset="premium-red">
+                <div class="preset-swatch" style="background:linear-gradient(135deg,#E53E3E,#742A2A)"></div>
+                <span>Premium Red</span>
+              </button>
+              <button class="preset-btn" onclick="applyPreset('dark-premium')" data-preset="dark-premium">
+                <div class="preset-swatch" style="background:linear-gradient(135deg,#2D3748,#1A202C)"></div>
+                <span>Dark Premium</span>
+              </button>
+              <button class="preset-btn" onclick="applyPreset('black-gold')" data-preset="black-gold">
+                <div class="preset-swatch" style="background:linear-gradient(135deg,#B8935A,#1A1A1A)"></div>
+                <span>Black & Gold</span>
+              </button>
+              <button class="preset-btn" onclick="applyPreset('modern-orange')" data-preset="modern-orange">
+                <div class="preset-swatch" style="background:linear-gradient(135deg,#ED8936,#C05621)"></div>
+                <span>Modern Orange</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Color Pickers -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Custom Colors</h3>
+            </div>
+            <div class="color-grid">
+              <div class="color-field"><label>Primary Color</label>
+                <div class="color-input-wrap"><input type="color" id="tc_primary" value="#C4323A"><span
+                    id="tc_primary_hex">#C4323A</span></div>
+              </div>
+              <div class="color-field"><label>Secondary Color</label>
+                <div class="color-input-wrap"><input type="color" id="tc_secondary" value="#250506"><span
+                    id="tc_secondary_hex">#250506</span></div>
+              </div>
+              <div class="color-field"><label>Accent Color</label>
+                <div class="color-input-wrap"><input type="color" id="tc_accent" value="#B8935A"><span
+                    id="tc_accent_hex">#B8935A</span></div>
+              </div>
+              <div class="color-field"><label>Background</label>
+                <div class="color-input-wrap"><input type="color" id="tc_background" value="#F5EBD9"><span
+                    id="tc_background_hex">#F5EBD9</span></div>
+              </div>
+              <div class="color-field"><label>Surface / Card</label>
+                <div class="color-input-wrap"><input type="color" id="tc_surface" value="#FAF4E8"><span
+                    id="tc_surface_hex">#FAF4E8</span></div>
+              </div>
+              <div class="color-field"><label>Text Color</label>
+                <div class="color-input-wrap"><input type="color" id="tc_text" value="#1A1A1A"><span
+                    id="tc_text_hex">#1A1A1A</span></div>
+              </div>
+              <div class="color-field"><label>Heading Color</label>
+                <div class="color-input-wrap"><input type="color" id="tc_heading" value="#250506"><span
+                    id="tc_heading_hex">#250506</span></div>
+              </div>
+              <div class="color-field"><label>Button Color</label>
+                <div class="color-input-wrap"><input type="color" id="tc_button" value="#C4323A"><span
+                    id="tc_button_hex">#C4323A</span></div>
+              </div>
+              <div class="color-field"><label>Button Text</label>
+                <div class="color-input-wrap"><input type="color" id="tc_button_text" value="#F5EBD9"><span
+                    id="tc_button_text_hex">#F5EBD9</span></div>
+              </div>
+              <div class="color-field"><label>Header Color</label>
+                <div class="color-input-wrap"><input type="color" id="tc_header" value="#250506"><span
+                    id="tc_header_hex">#250506</span></div>
+              </div>
+              <div class="color-field"><label>Footer Color</label>
+                <div class="color-input-wrap"><input type="color" id="tc_footer" value="#0E0503"><span
+                    id="tc_footer_hex">#0E0503</span></div>
+              </div>
+              <div class="color-field"><label>Border Color</label>
+                <div class="color-input-wrap"><input type="color" id="tc_border" value="#E8DCC4"><span
+                    id="tc_border_hex">#E8DCC4</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── WEBSITE SETTINGS ── -->
+        <div id="view-website-settings" class="view-section" style="display:none;">
+          <div class="view-toolbar">
+            <h2 class="view-title">Website Settings</h2>
+            <button onclick="saveWebsiteSettings()" class="btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z" />
+              </svg>
+              Save Settings
+            </button>
+          </div>
+
+          <div class="settings-grid">
+            <!-- Branding -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">🏷 Branding</h3>
+              </div>
+              <div class="form-group"><label>Website Name</label><input type="text" id="ws_site_name" class="form-input"
+                  value="Chick Buck"></div>
+              <div class="form-group"><label>Brand Description</label><input type="text" id="ws_brand_desc"
+                  class="form-input" value="The Unique Taste Of Saudi Arabia"></div>
+              <div class="form-group">
+                <label>Logo URL</label>
+                <input type="url" id="ws_logo_url" class="form-input" placeholder="https://... or /KSA/assets/logo.png">
+                <div id="logoPreview" class="image-preview-wrap"></div>
+              </div>
+              <div class="form-group">
+                <label>Favicon URL</label>
+                <input type="url" id="ws_favicon_url" class="form-input"
+                  placeholder="https://... or /KSA/assets/favicon.png">
+              </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">📞 Contact</h3>
+              </div>
+              <div class="form-group"><label>Phone Number</label><input type="text" id="ws_phone" class="form-input"
+                  value="05013-62558"></div>
+              <div class="form-group"><label>WhatsApp Number</label><input type="text" id="ws_whatsapp"
+                  class="form-input" placeholder="966501362558"></div>
+              <div class="form-group"><label>Email</label><input type="email" id="ws_email" class="form-input"
+                  placeholder="info@chickbuck.com"></div>
+              <div class="form-group"><label>Address</label><textarea id="ws_address" class="form-input" rows="2"
+                  placeholder="Jeddah, Saudi Arabia"></textarea></div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">📱 Social Media</h3>
+              </div>
+              <div class="form-group"><label>Instagram URL</label><input type="url" id="ws_instagram" class="form-input"
+                  value="https://www.instagram.com/chick_buck_ksa"></div>
+              <div class="form-group"><label>Facebook URL</label><input type="url" id="ws_facebook" class="form-input">
+              </div>
+              <div class="form-group"><label>TikTok URL</label><input type="url" id="ws_tiktok" class="form-input"
+                  value="https://www.tiktok.com/@chick_buck_ksa"></div>
+              <div class="form-group"><label>Snapchat URL</label><input type="url" id="ws_snapchat" class="form-input"
+                  value="https://www.snapchat.com/add/chickbuckksa"></div>
+              <div class="form-group"><label>YouTube URL</label><input type="url" id="ws_youtube" class="form-input">
+              </div>
+            </div>
+
+            <!-- Business -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">⏰ Business</h3>
+              </div>
+              <div class="form-group"><label>Opening Hours</label><input type="text" id="ws_business_hours"
+                  class="form-input" value="Daily 10:00 AM – 2:00 AM"></div>
+              <div class="form-group"><label>Currency</label><input type="text" id="ws_currency" class="form-input"
+                  value="SR"></div>
+              <div class="form-group"><label>Delivery Info</label><input type="text" id="ws_delivery_info"
+                  class="form-input" value="Delivery fee: 5 SR"></div>
+            </div>
+
+            <!-- Footer -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">🦶 Footer</h3>
+              </div>
+              <div class="form-group"><label>Footer Description</label><textarea id="ws_footer_desc" class="form-input"
+                  rows="2">The Unique Taste Of Saudi Arabia</textarea></div>
+              <div class="form-group"><label>Copyright Text</label><input type="text" id="ws_footer_copy"
+                  class="form-input" value="© 2026 CHICK BUCK · All Rights Reserved."></div>
+            </div>
+
+            <!-- Announcement Bar -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">📢 Announcement Bar</h3>
+              </div>
+              <div class="form-group">
+                <label class="toggle-label">
+                  <input type="checkbox" id="ws_announcement_enabled">
+                  <span class="toggle-slider"></span>
+                  Enable Announcement Bar
+                </label>
+              </div>
+              <div class="form-group"><label>Announcement Text</label><input type="text" id="ws_announcement_text"
+                  class="form-input" value="🔥 TODAY ONLY — GET 20% OFF ON COMBOS 🔥"></div>
+              <div class="form-row">
+                <div class="form-group"><label>Background Color</label><input type="color" id="ws_announcement_bg"
+                    value="#C4323A"></div>
+                <div class="form-group"><label>Text Color</label><input type="color" id="ws_announcement_color"
+                    value="#FFFFFF"></div>
+              </div>
+              <div class="form-group"><label>Link (optional)</label><input type="url" id="ws_announcement_link"
+                  class="form-input" placeholder="https://..."></div>
+              <div class="form-row">
+                <div class="form-group"><label>Start Date</label><input type="datetime-local" id="ws_announcement_start"
+                    class="form-input"></div>
+                <div class="form-group"><label>End Date</label><input type="datetime-local" id="ws_announcement_end"
+                    class="form-input"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PRODUCT ANALYTICS ── -->
+        <div id="view-products" class="view-section" style="display:none;">
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title">Top Selling Items</h2>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Arabic Name</th>
+                    <th>Qty Sold</th>
+                    <th>Revenue</th>
+                  </tr>
+                </thead>
+                <tbody id="productsTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── REPORTS ── -->
+        <div id="view-reports" class="view-section" style="display:none;">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <p class="stat-label">Total Sales</p>
+              <div class="stat-value" id="reportTotalSales">0 SR</div>
+            </div>
+            <div class="stat-card">
+              <p class="stat-label">Total Orders</p>
+              <div class="stat-value" id="reportTotalOrders">0</div>
+            </div>
+            <div class="stat-card">
+              <p class="stat-label">Avg Order Value</p>
+              <div class="stat-value" id="reportAvgOrder">0 SR</div>
+            </div>
+          </div>
+          <div class="charts-grid">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Daily Sales (7 Days)</h3>
+              </div><canvas id="dailySalesChart" style="max-height:260px;"></canvas>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Monthly Sales</h3>
+              </div><canvas id="monthlySalesChart" style="max-height:260px;"></canvas>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Sales by Branch</h3>
+              </div><canvas id="branchSalesChart" style="max-height:260px;"></canvas>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+     REALTIME TOAST
+══════════════════════════════════════════════════════════════ -->
+  <div id="realtimeToast" class="realtime-toast" style="display:none;">
+    🔔 <strong>New Order!</strong> <span id="toastMsg"></span>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+     ADD/EDIT PRODUCT MODAL
+══════════════════════════════════════════════════════════════ -->
+  <div id="productFormModal" class="modal-overlay" style="display:none;">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="productFormTitle">Add Product</h2>
+        <button class="modal-close" onclick="closeProductForm()">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="productForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Branch</label>
+              <select id="prodBranch" class="form-input" required>
+                <option value="branch1">Branch 1 — Ameerfawaz</option>
+                <option value="branch2">Branch 2 — AI-Samer</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Category</label>
+              <select id="prodCategory" class="form-input" required>
+                <option value="BROASTED">Broasted</option>
+                <option value="SANDWICHES">Sandwiches</option>
+                <option value="BURGERS">Burgers</option>
+                <option value="SIDES">Sides</option>
+                <option value="MEALS">Meals</option>
+                <option value="LOADED">Loaded</option>
+                <option value="CLUBS">Clubs</option>
+                <option value="COLD DRINKS">Cold Drinks</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Name (English)</label><input type="text" id="prodName" class="form-input"
+                required></div>
+            <div class="form-group"><label>Name (Arabic)</label><input type="text" id="prodNameAr" class="form-input"
+                dir="rtl"></div>
+          </div>
+          <div class="form-group"><label>Description (English)</label><textarea id="prodDesc" class="form-input"
+              rows="2"></textarea></div>
+          <div class="form-group"><label>Description (Arabic)</label><textarea id="prodDescAr" class="form-input"
+              rows="2" dir="rtl"></textarea></div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Price (SR)</label>
+              <input type="number" id="prodPrice" class="form-input" step="0.5" min="0">
+              <small class="form-hint">Leave empty if using sizes</small>
+            </div>
+            <div class="form-group">
+              <label>Calories</label>
+              <input type="number" id="prodCalories" class="form-input" min="0">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Has Size Options?</label>
+            <select id="prodHasSizes" class="form-input" onchange="toggleSizeFields()">
+              <option value="no">No — Single Price</option>
+              <option value="yes">Yes — Multiple Sizes</option>
+            </select>
+          </div>
+          <div id="sizeFields" class="size-fields-wrap" style="display:none;">
+            <label>Size Prices</label>
+            <input type="text" id="prodSizes" class="form-input" placeholder="Normal:9, Spicy:13">
+            <small class="form-hint">Format: SizeName:Price, separated by commas</small>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Badge</label>
+              <select id="prodBadge" class="form-input">
+                <option value="">None</option>
+                <option value="BEST SELLER">Best Seller</option>
+                <option value="NEW">New</option>
+                <option value="KIDS">Kids</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Product Image</label>
+              <input type="file" id="prodImage" class="form-input" accept="image/*">
+              <div id="imagePreview" class="image-preview-wrap"></div>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button type="button" onclick="closeProductForm()" class="btn-secondary">Cancel</button>
+            <button type="submit" class="btn-primary">Save Product</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+     ADD/EDIT BANNER MODAL
+══════════════════════════════════════════════════════════════ -->
+  <div id="bannerFormModal" class="modal-overlay" style="display:none;">
+    <div class="modal" style="max-width:640px;">
+      <div class="modal-header">
+        <h2 class="modal-title" id="bannerFormTitle">Add Banner</h2>
+        <button class="modal-close" onclick="closeBannerForm()">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="bannerForm">
+          <div class="form-row">
+            <div class="form-group"><label>Title</label><input type="text" id="b_title" class="form-input"
+                placeholder="CRISPY CHICKEN COMBO"></div>
+            <div class="form-group"><label>Subtitle</label><input type="text" id="b_subtitle" class="form-input"
+                placeholder="Limited Time Offer"></div>
+          </div>
+          <div class="form-group"><label>Description</label><textarea id="b_description" class="form-input" rows="2"
+              placeholder="Banner description..."></textarea></div>
+          <div class="form-row">
+            <div class="form-group"><label>Discount Badge</label><input type="text" id="b_discount" class="form-input"
+                placeholder="20% OFF"></div>
+            <div class="form-group"><label>Coupon Code</label><input type="text" id="b_coupon_code" class="form-input"
+                placeholder="CRUNCH20"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>CTA Button Text</label><input type="text" id="b_cta_text" class="form-input"
+                value="ORDER NOW"></div>
+            <div class="form-group">
+              <label>CTA Action</label>
+              <select id="b_cta_action" class="form-input">
+                <option value="menu">Go to Menu</option>
+                <option value="category">Go to Category</option>
+                <option value="url">External URL</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label>Link Value (category name or URL)</label><input type="text" id="b_link_value"
+              class="form-input" placeholder="BURGERS or https://..."></div>
+          <div class="form-row">
+            <div class="form-group"><label>Desktop Image URL</label><input type="url" id="b_desktop_img"
+                class="form-input" placeholder="https://...">
+              <div id="bannerDesktopPreview" class="image-preview-wrap"></div>
+            </div>
+            <div class="form-group"><label>Mobile Image URL</label><input type="url" id="b_mobile_img"
+                class="form-input" placeholder="https://...">
+              <div id="bannerMobilePreview" class="image-preview-wrap"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Background Color</label><input type="color" id="b_bg_color" value="#250506">
+            </div>
+            <div class="form-group"><label>Text Color</label><input type="color" id="b_text_color" value="#F5EBD9">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Start Date</label><input type="datetime-local" id="b_start_date"
+                class="form-input"></div>
+            <div class="form-group"><label>End Date</label><input type="datetime-local" id="b_end_date"
+                class="form-input"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Display Order</label><input type="number" id="b_display_order"
+                class="form-input" value="1" min="1"></div>
+            <div class="form-group">
+              <label class="toggle-label" style="margin-top:28px;">
+                <input type="checkbox" id="b_is_active" checked>
+                <span class="toggle-slider"></span>
+                Active
+              </label>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button type="button" onclick="closeBannerForm()" class="btn-secondary">Cancel</button>
+            <button type="submit" class="btn-primary">Save Banner</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Print Area -->
+  <div id="printArea" style="display:none;"></div>
+
+  <script src="/admin/admin.js"></script>
+</body>
+
+</html>
