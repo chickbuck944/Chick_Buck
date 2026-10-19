@@ -1404,6 +1404,11 @@ document.addEventListener("DOMContentLoaded", () => {
             "error",
             () => {
 
+                heroVideo.removeAttribute("src");
+                heroVideo.closest(".hero-video-frame")?.classList.add(
+                    "video-unavailable"
+                );
+
                 soundButtons.forEach((button) => {
 
                     button.setAttribute(

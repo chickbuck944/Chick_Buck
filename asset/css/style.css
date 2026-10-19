@@ -4389,7 +4389,7 @@ body.site-theme .site-footer {
     border: 1px solid rgba(255, 255, 255, 0.32);
     border-radius: 34px;
 
-    background: #250607;
+    background: #250607 url("../image/combo.jpg") center / cover no-repeat;
 
     box-shadow:
         0 42px 85px rgba(70, 0, 9, 0.42),
@@ -4446,7 +4446,11 @@ body.site-theme .site-footer {
     display: block;
     object-fit: cover;
     object-position: center;
-    background: #250607;
+    background: #250607 url("../image/combo.jpg") center / cover no-repeat;
+}
+
+.hero-video-frame.video-unavailable .hero-promo-video {
+    opacity: 0;
 }
 
 .hero-video-overlay {
@@ -4993,7 +4997,8 @@ body.site-theme.home-page .experience-section .quality-item p {
     .site-header .glass-navbar,
     .site-header .glass-theme-toggle,
     .site-header .glass-visit-button { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
-    .home-page .hero-promo-video { display: none; }
+    /* Keep the main experience visible on phones; the poster image covers any video-load failure. */
+    .home-page .hero-promo-video { display: block; }
     .home-page .hero-orb,
     .home-page .hero-particle,
     .home-page .reviews-glow { display: none; }
