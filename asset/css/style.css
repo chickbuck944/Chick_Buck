@@ -4946,17 +4946,25 @@ body.site-theme.home-page .experience-section .quality-item p {
 .ordering-closed-notice {
     position: fixed;
     z-index: 10000;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    padding: 24px;
-    background: rgba(9, 2, 3, 0.94);
-    backdrop-filter: blur(12px);
+    right: 22px;
+    bottom: 22px;
+    width: min(420px, calc(100vw - 32px));
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .22s ease, transform .22s ease;
+}
+
+.ordering-closed-notice.is-visible {
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .ordering-closed-notice__content {
-    width: min(560px, 100%);
-    padding: clamp(30px, 6vw, 58px);
+    position: relative;
+    width: 100%;
+    padding: 30px;
     border: 1px solid rgba(255, 216, 23, 0.54);
     border-radius: 28px;
     color: #fff;
@@ -4980,6 +4988,12 @@ body.site-theme.home-page .experience-section .quality-item p {
     line-height: 1;
 }
 
+.ordering-closed-notice h2 {
+    margin: 0;
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
+    line-height: 1.1;
+}
+
 .ordering-closed-notice h1 + p {
     margin: 20px auto 28px;
     max-width: 440px;
@@ -4988,8 +5002,27 @@ body.site-theme.home-page .experience-section .quality-item p {
 }
 
 .ordering-closed-notice .button { margin: 6px; }
-.ordering-is-closed { overflow: hidden; }
-.ordering-is-closed-link { opacity: 0.72; cursor: not-allowed; }
+.ordering-closed-notice__close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .14);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .ordering-closed-notice {
+        right: 16px;
+        bottom: 92px;
+    }
+}
 
 /* Performance mode: preserve the design but remove continuous expensive paints. */
 .home-page .hero-promo-video { pointer-events: none; }
