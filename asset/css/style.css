@@ -4993,12 +4993,24 @@ body.site-theme.home-page .experience-section .quality-item p {
 
 /* Performance mode: preserve the design but remove continuous expensive paints. */
 .home-page .hero-promo-video { pointer-events: none; }
+.home-page .hero-video-glow,
+.home-page .hero-video-frame::before { animation: none !important; }
 .home-page .reviews-glow,
 .home-page .hero-orb,
 .home-page .hero-particle,
 .home-page .hero-ring,
 .home-page .glass-navbar::after,
 .home-page .glass-visit-button::before { animation: none !important; }
+
+@media (min-width: 768px) {
+    /* Avoid repeated 3D repainting over the playing hero video on laptops. */
+    .home-page .hero-video-shell { perspective: none; }
+    .home-page .hero-video-frame {
+        transform: translateZ(0) !important;
+        transform-style: flat;
+        transition: box-shadow 0.2s ease;
+    }
+}
 
 @media (max-width: 900px) {
     .site-header.glass-header,

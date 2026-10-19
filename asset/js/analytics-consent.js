@@ -62,24 +62,8 @@
         banner.querySelector(".cookie-consent-accept").focus();
     };
 
-    const addSettingsButton = () => {
-        if (document.getElementById("cookieSettingsButton")) return;
-
-        const button = document.createElement("button");
-        button.id = "cookieSettingsButton";
-        button.type = "button";
-        button.className = "cookie-settings-button";
-        button.textContent = "Cookie settings";
-        button.addEventListener("click", () => {
-            localStorage.removeItem(consentKey);
-            showBanner();
-        });
-        document.body.appendChild(button);
-    };
-
     document.addEventListener("DOMContentLoaded", () => {
         if (currentConsent === "granted") loadGoogleAnalytics();
         if (!currentConsent) showBanner();
-        addSettingsButton();
     });
 })();
