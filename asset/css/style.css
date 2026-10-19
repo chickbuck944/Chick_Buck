@@ -4447,10 +4447,18 @@ body.site-theme .site-footer {
     object-fit: cover;
     object-position: center;
     background: #250607 url("../image/combo.jpg") center / cover no-repeat;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: opacity;
 }
 
 .hero-video-frame.video-unavailable .hero-promo-video {
     opacity: 0;
+}
+
+.hero-video-frame.is-buffering .hero-promo-video {
+    opacity: 0.78;
 }
 
 .hero-video-overlay {
@@ -5052,6 +5060,8 @@ body.site-theme.home-page .experience-section .quality-item p {
     right: 18px;
     bottom: 18px;
     font-size: 13px;
+    max-width: calc(100vw - 36px);
+    white-space: nowrap;
 }
 .cookie-consent-banner:has(~ .cookie-settings-button) ~ .cookie-settings-button { display: none; }
 @media (max-width: 640px) {
@@ -5059,6 +5069,25 @@ body.site-theme.home-page .experience-section .quality-item p {
     .cookie-consent-actions { width: 100%; }
     .cookie-consent-actions button { flex: 1; }
     .cookie-settings-button { right: 12px; bottom: 12px; }
+}
+
+@media (max-width: 767px) {
+    /* Keep cookie controls clear of the fixed five-item mobile navigation. */
+    body.has-mobile-bottom-nav .cookie-consent-banner {
+        right: 12px;
+        bottom: calc(100px + env(safe-area-inset-bottom));
+        width: calc(100vw - 24px);
+        z-index: 7001;
+    }
+
+    body.has-mobile-bottom-nav .cookie-settings-button {
+        right: 12px;
+        bottom: calc(100px + env(safe-area-inset-bottom));
+        z-index: 7001;
+        min-height: 38px;
+        padding: 7px 12px;
+        font-size: 12px;
+    }
 }
 
 .reviews-track {

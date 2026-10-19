@@ -1400,6 +1400,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (heroVideo) {
 
+        // Begin buffering while the hero poster is visible. This prevents the
+        // first visible seconds from stuttering on typical mobile connections.
+        heroVideo.preload = "auto";
+        heroVideo.load();
+
+        heroVideo.addEventListener(
+            "waiting",
+            () => heroVideo.closest(".hero-video-frame")?.classList.add("is-buffering")
+        );
+
+        heroVideo.addEventListener(
+            "playing",
+            () => heroVideo.closest(".hero-video-frame")?.classList.remove("is-buffering")
+        );
+
         heroVideo.addEventListener(
             "error",
             () => {
