@@ -4,12 +4,12 @@
 window.CHICK_BUCK_SEASONAL = Object.freeze({
    
   
-    enabled: false,
-    startDate: "2026-09-07",
-    endDate: "2026-09-30",
+    enabled: true,
+    startDate: "2026-10-19",
+    endDate: "2027-01-31",
 
     heroCarousel: {
-        enabled: false,
+        enabled: true,
         intervalSeconds: 10
     },
 
@@ -21,26 +21,28 @@ window.CHICK_BUCK_SEASONAL = Object.freeze({
     },
 
     content: {
-        slideName: "Saudi Flavours coming to Tirur",
-        eyebrow: "The Magic of",
-        label: "Saudi Flavours",
-        titleSmall: "Opens in",
-        titleMain: "Tirur",
+        slideName: "Coming soon in Kozhikode",
+        eyebrow: "Chick Buck is coming to",
+        label: "New Kerala outlet",
+        titleSmall: "Coming Soon",
+        titleMain: "Kozhikode",
         titleLocal: "",
         localLanguage: "en",
         localDirection: "ltr",
-        description: "The unique taste of Saudi Arabia is arriving in Tirur. Get ready for crispy favourites, bold flavours and the Chick Buck experience.",
+        description: "The unique taste of Saudi Arabia is coming to Kozhikode. Get ready for crispy favourites, bold flavours and the Chick Buck experience.",
+        sealCity: "Kozhikode",
+        sealRegion: "Kerala",
 
         primaryButton: {
             label: "Explore the menu",
             href: "mainmenu.html"
         },
         secondaryButton: {
-            label: "Contact Tirur",
-            href: "contact.html?outlet=tirur#outletDetails"
+            label: "Contact Us",
+            href: "contact.html"
         },
 
         footerLabel: "Opening Soon",
-        footerValue: "Tirur, Kerala"
+        footerValue: "Kozhikode, Kerala"
     }
 });

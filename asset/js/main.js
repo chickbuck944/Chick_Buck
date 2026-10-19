@@ -1587,6 +1587,14 @@ document.addEventListener("DOMContentLoaded", () => {
             seasonalContent.footerValue
         );
         setSeasonalText(
+            "[data-seasonal-seal-city]",
+            seasonalContent.sealCity
+        );
+        setSeasonalText(
+            "[data-seasonal-seal-region]",
+            seasonalContent.sealRegion
+        );
+        setSeasonalText(
             "[data-seasonal-image-caption]",
             seasonalContent.imageCaption
         );
