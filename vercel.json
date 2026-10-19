@@ -1,0 +1,34 @@
+{
+  "redirects": [
+    {
+      "source": "/KSA",
+      "destination": "/KSA/",
+      "permanent": false
+    },
+    {
+      "source": "/ksa",
+      "destination": "/KSA/",
+      "permanent": false
+    },
+    {
+      "source": "/UAE",
+      "destination": "/UAE/",
+      "permanent": false
+    },
+    {
+      "source": "/uae",
+      "destination": "/UAE/",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/KSA/",
+      "destination": "/KSA/index.html"
+    },
+    {
+      "source": "/UAE/",
+      "destination": "/UAE/index.html"
+    }
+  ]
+}

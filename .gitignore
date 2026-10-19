@@ -6,3 +6,6 @@ npm-debug.log*
 # This source video is over GitHub's 100 MB file limit.
 # Host it separately or use Git LFS before adding it to the repository.
 asset/video/outlet-tirur.mp4
+
+.vercel
+.env*
