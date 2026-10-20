@@ -5107,24 +5107,6 @@ body.site-theme.home-page .experience-section .quality-item p {
     .home-page .home-scroll-card:not(.visible) { filter: none; }
 }
 
-/* Mobile: keep the red-gold brand gradient, but stop its continuous colour drift.
-   Desktop keeps its existing gradient treatment above. */
-@media (max-width: 767px) {
-    body.site-theme {
-        /* Match the desktop colour composition; only the animation is removed. */
-        background-size: 190% 190%;
-        background-position: 0% 50%;
-        background-attachment: scroll;
-        animation: none !important;
-    }
-
-    body.site-theme::before,
-    body.site-theme::after {
-        animation: none !important;
-        opacity: 0.55;
-    }
-}
-
 .reviews-slider {
     width: 100%;
     overflow: hidden;
