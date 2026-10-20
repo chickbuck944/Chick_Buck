@@ -2004,8 +2004,8 @@
 @media (max-width: 768px) {
     body.site-theme {
         background-attachment: scroll;
-        background-size: 100% 100%;
-        animation: none !important;
+        background-size: 190% 190%;
+        animation: siteThemeGradient 15s ease-in-out infinite !important;
     }
 
     body.site-theme::before,
@@ -2066,6 +2066,17 @@
     .home-page .site-footer {
         content-visibility: auto;
         contain-intrinsic-size: auto 760px;
+    }
+}
+
+/* This file loads after style.css. Keep the phone hero's visible surface
+   moving too, so it matches the desktop red-gold gradient animation. */
+@media (max-width: 767px) {
+    .home-page.site-theme .hero-section.video-hero,
+    html[data-chickbuck-dark] .home-page.site-theme .hero-section.video-hero {
+        background-size: 190% 190% !important;
+        background-position: 0% 50%;
+        animation: chickbuck-mobile-hero-gradient 15s ease-in-out infinite !important;
     }
 }
 
