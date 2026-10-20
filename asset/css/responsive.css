@@ -2004,8 +2004,10 @@
 @media (max-width: 768px) {
     body.site-theme {
         background-attachment: scroll;
-        background-size: 190% 190%;
-        animation: siteThemeGradient 15s ease-in-out infinite !important;
+        /* The visible hero provides the animated colour. Keep this document
+           background still so it does not repaint the entire page each frame. */
+        background-size: 100% 100%;
+        animation: none !important;
     }
 
     body.site-theme::before,
@@ -2074,33 +2076,47 @@
 @media (max-width: 767px) {
     .home-page.site-theme .hero-section.video-hero,
     html[data-chickbuck-dark] .home-page.site-theme .hero-section.video-hero {
-        background-size: 190% 190% !important;
-        background-position: 0% 50%;
-        animation: chickbuck-mobile-hero-gradient 15s ease-in-out infinite !important;
+        background: transparent !important;
+        animation: none !important;
     }
 
     .home-page .hero-background-animation {
+        isolation: isolate;
+        contain: paint;
+        background: transparent;
+        animation: none !important;
+    }
+
+    .home-page .hero-background-animation::before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        inset: -32%;
         background:
             radial-gradient(circle at 12% 18%, rgba(255, 215, 0, 0.24), transparent 27%),
             radial-gradient(circle at 90% 76%, rgba(255, 88, 24, 0.30), transparent 32%),
             linear-gradient(125deg, #430809 0%, #7a0000 34%, #c40000 67%, #f20a0a 100%);
-        background-size: 260% 260%;
-        background-position: 0% 50%;
-        animation: chickbuck-mobile-hero-colour-shift 8s ease-in-out infinite !important;
+        transform: translate3d(-7%, -2%, 0) scale(1.08);
+        will-change: transform;
+        backface-visibility: hidden;
+        animation: chickbuck-mobile-hero-colour-pan 18s ease-in-out infinite alternate;
     }
 
-    html[data-chickbuck-dark] .home-page .hero-background-animation {
+    html[data-chickbuck-dark] .home-page .hero-background-animation::before {
         background:
             radial-gradient(circle at 12% 18%, rgba(255, 210, 0, 0.16), transparent 27%),
             radial-gradient(circle at 90% 76%, rgba(215, 24, 38, 0.24), transparent 32%),
             linear-gradient(125deg, #090506 0%, #16070a 38%, #2c070d 68%, #420810 100%);
-        background-size: 260% 260%;
+    }
+
+    .home-page .hero-grid-pattern {
+        animation: none !important;
     }
 }
 
-@keyframes chickbuck-mobile-hero-colour-shift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+@keyframes chickbuck-mobile-hero-colour-pan {
+    from { transform: translate3d(-7%, -2%, 0) scale(1.08); }
+    to { transform: translate3d(7%, 2%, 0) scale(1.08); }
 }
 
 
