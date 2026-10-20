@@ -9848,3 +9848,51 @@ html[data-chickbuck-dark] body.site-theme :is(input, textarea, select, .menu-sea
         transform: translateX(50%);
     }
 }
+
+/* Desktop performance mode: retain the brand palette, hero video and liquid
+   navigation, but stop decorative animation layers that cause repaint work on
+   lower-powered Windows laptops. Mobile styling remains unchanged. */
+@media (min-width: 768px) {
+    body.site-theme::before,
+    body.site-theme::after,
+    .hero-grid-pattern,
+    .hero-orb,
+    .hero-particles span,
+    .hero-video-glow,
+    .hero-video-frame::before,
+    .hero-live-dot,
+    .hero-price-badge,
+    .hero-ring,
+    .review-glow {
+        animation: none !important;
+    }
+
+    .hero-grid-pattern {
+        background-position: 0 0;
+    }
+
+    .hero-particles span {
+        opacity: 0.45;
+        transform: none;
+    }
+
+    .hero-video-glow {
+        opacity: 0.72;
+        transform: translate(-50%, -50%) scale(0.96);
+    }
+
+    .hero-price-badge,
+    .hero-ring {
+        transform: none;
+    }
+
+    /* Section glass remains visually translucent without repeatedly blurring
+       all content behind it while the visitor scrolls. */
+    body.site-theme .specials-section,
+    body.site-theme .experience-section,
+    body.site-theme .about-story,
+    body.site-theme .about-values {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+}

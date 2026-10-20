@@ -538,14 +538,12 @@ document.addEventListener("DOMContentLoaded", () => {
             name: "Tirur",
             region: "Kerala outlet",
             address: "Tirur, Kerala",
-            // Google Maps coordinates resolved from the official Tirur map link.
-            // Short maps.app links cannot be embedded in an iframe.
             query: "10.9306216,75.932719",
             map: "https://maps.app.goo.gl/LN4kVhTub9RVVKZt6",
             whatsapp: "919744354373"
         },
         "ksa-shop-1": {
-            name: "Jeddah Shop 1",
+            name: "Al-Samer-Ajwad",
             region: "Kingdom of Saudi Arabia",
             address: "Chick Buck, Jeddah — 21.4158058, 39.2791672",
             query: "21.41580581665039,39.27916717529297",
@@ -553,7 +551,7 @@ document.addEventListener("DOMContentLoaded", () => {
             whatsapp: "966538489145"
         },
         "ksa-shop-2": {
-            name: "Jeddah Shop 2",
+            name: "Ameerfawaz",
             region: "Kingdom of Saudi Arabia",
             address: "Chick Buck, Jeddah",
             query: "Chick Buck Jeddah Saudi Arabia",

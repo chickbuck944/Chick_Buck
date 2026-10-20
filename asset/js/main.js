@@ -913,6 +913,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
 
+    // Carousels only need their timers, measurements and event handlers when a
+    // visitor is getting close to them. Deferring that work keeps initial page
+    // rendering responsive, particularly on older laptops.
+    const initializeWhenNear = (element, initialize) => {
+        if (!element) return;
+
+        let initialized = false;
+        const run = () => {
+            if (initialized) return;
+            initialized = true;
+            initialize();
+        };
+
+        if (!("IntersectionObserver" in window)) {
+            run();
+            return;
+        }
+
+        const observer = new IntersectionObserver(
+            ([entry], instance) => {
+                if (!entry.isIntersecting) return;
+                run();
+                instance.disconnect();
+            },
+            { rootMargin: "700px 0px", threshold: 0 }
+        );
+
+        observer.observe(element);
+        element.addEventListener("focusin", run, { once: true });
+    };
+
     const reviewsSlider = document.getElementById("reviewsSlider");
     const reviewsTrack = document.getElementById("reviewsTrack");
     const reviewPrevious = document.getElementById("reviewPrevious");
@@ -922,7 +953,8 @@ document.addEventListener("DOMContentLoaded", () => {
         ? Array.from(reviewsTrack.querySelectorAll(".review-card"))
         : [];
 
-    if (reviewsSlider && reviewsTrack && reviewCards.length > 0) {
+    initializeWhenNear(reviewsSlider, () => {
+        if (!reviewsTrack || reviewCards.length === 0) return;
         const reviewReducedMotion = window.matchMedia(
             "(prefers-reduced-motion: reduce)"
         );
@@ -1115,7 +1147,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             startReviewAutoplay();
         }
-    }
+    });
 
 
     
@@ -2038,7 +2070,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "[data-inauguration-slider]"
     );
 
-    if (inaugurationSlider) {
+    initializeWhenNear(inaugurationSlider, () => {
         const sliderTrack = inaugurationSlider.querySelector(
             "[data-slider-track]"
         );
@@ -2337,7 +2369,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         showSlide(0);
         startAutoAdvance();
-    }
+    });
 
 
     
@@ -2346,7 +2378,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "[data-outlet-carousel]"
     );
 
-    if (outletCarousel) {
+    initializeWhenNear(outletCarousel, () => {
         const outletViewport = outletCarousel.querySelector(
             "[data-outlet-viewport]"
         );
@@ -2669,7 +2701,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         measureOutletCarousel();
-    }
+    });
 
 
     
