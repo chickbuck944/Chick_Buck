@@ -5049,9 +5049,11 @@ body.site-theme.home-page .experience-section .quality-item p {
        that continuously repaint behind the video and during page scrolling.
     */
     body.site-theme {
-        background-size: 100% 100%;
-        background-attachment: scroll;
-        animation: none !important;
+        /* Restore the desktop red-gold gradient motion without restoring the
+           heavier floating layers that caused laptop scrolling lag. */
+        background-size: 190% 190%;
+        background-attachment: fixed;
+        animation: siteThemeGradient 15s ease-in-out infinite !important;
     }
 
     body.site-theme::before,
