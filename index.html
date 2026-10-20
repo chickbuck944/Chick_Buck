@@ -11,20 +11,20 @@
 <meta content="website" property="og:type"/>
 <meta content="Chick Buck" property="og:site_name"/>
 <meta content="en_IN" property="og:locale"/>
-<meta content="Chick Buck | Broasted Chicken &amp; Burgers" property="og:title"/>
+<meta content="Chick Buck | THE UNIQUE TASTE OF SAUDI ARABIA" property="og:title"/>
 <meta content="Discover Chick Buck's delicious broasted chicken, burgers, buckets and more. Explore our menu today!" property="og:description"/>
 <meta content="https://www.chickbuck.com/" property="og:url"/>
-<meta content="https://chickbuck.com/asset/image/chick-buck-social-share.jpg" property="og:image"/>
+<meta content="https://chickbuck.com/asset/image/logo.png" property="og:image"/>
 <meta content="image/jpeg" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="Chick Buck loaded fries" property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Chick Buck | Broasted Chicken &amp; Burgers" name="twitter:title"/>
+<meta content="Chick Buck | THE UNIQUE TASTE OF SAUDI ARABIA" name="twitter:title"/>
 <meta content="Discover Chick Buck's delicious broasted chicken, burgers, buckets and more. Explore our menu today!" name="twitter:description"/>
-<meta content="https://chickbuck.com/asset/image/chick-buck-social-share.jpg" name="twitter:image"/>
+<meta content="https://chickbuck.com/asset/image/logo.png" name="twitter:image"/>
 <meta content="Chick Buck loaded fries" name="twitter:image:alt"/>
-<title>Chick Buck | Broasted Chicken, Burgers &amp; More</title>
+<title>Chick Buck | THE UNIQUE TASTE OF SAUDI ARABIA</title>
 <link href="https://www.chickbuck.com/" rel="canonical"/>
 <link href="asset/image/logo-icon.png?v=20260909" rel="icon" type="image/png"/>
 
@@ -32,7 +32,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 
-<link href="asset/css/style.css?v=20261020-desktop-gradient-restored" rel="stylesheet"/>
+<link href="asset/css/style.css?v=20261020-loader-desktop-white" rel="stylesheet"/>
 <link href="asset/css/responsive.css?v=20261020-mobile-smooth-gradient" rel="stylesheet"/>
 <script type="application/ld+json">
 {
@@ -92,8 +92,16 @@
     <script defer src="/_vercel/insights/script.js"></script>
     <script defer src="asset/js/analytics-consent.js?v=20261019-no-settings"></script>
 </head>
-<body class="site-theme home-page">
+<body class="site-theme home-page loader-active">
 <a class="skip-link" href="#mainContent">Skip to content</a>
+
+<!-- Shown once per browser session; main.js always releases the page on video error or timeout. -->
+<div aria-label="Loading Chick Buck website" aria-live="polite" class="page-loader" id="pageLoader" role="status">
+<video autoplay class="loader-video" id="loaderVideo" muted playsinline preload="auto">
+<source src="asset/video/loader.mp4" type="video/mp4"/>
+</video>
+<button class="skip-loader" id="skipLoader" type="button">Skip intro</button>
+</div>
 
 
 <header class="site-header glass-header" id="siteHeader">
@@ -940,7 +948,7 @@ The unique taste of Saudi Arabia is coming to Kozhikode. Get ready for crispy fa
 
     </button>
 
-<script src="asset/js/seasonal-settings.js?v=20261019-seasonal-off"></script>
-<script src="asset/js/main.js?v=20261019-kozhikode"></script>
+<script src="asset/js/seasonal-settings.js?v=20261020-loader-video"></script>
+<script src="asset/js/main.js?v=20261020-loader-video"></script>
 </body>
 </html>

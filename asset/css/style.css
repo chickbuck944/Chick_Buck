@@ -124,6 +124,19 @@ button {
     transition: opacity 0.28s ease;
 }
 
+/* The loader video is portrait. On laptop and desktop screens, show the full
+   frame and use white side space instead of cropping the video. */
+@media (min-width: 768px) {
+    .page-loader {
+        background: #fff;
+    }
+
+    .loader-video {
+        object-fit: contain;
+        background: #fff;
+    }
+}
+
 .page-loader.is-video-ready .loader-video {
     opacity: 1;
 }

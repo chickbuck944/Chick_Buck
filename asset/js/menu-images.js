@@ -12,7 +12,7 @@ window.CHICK_BUCK_MENU_IMAGES = Object.freeze({
     // Starters
     "French Fries": "fries-web.jpg",
     "Loaded Fries": "loaded-fries-web.jpg",
-    "Chicken Popcorn": "popcorn.png",
+    "Chicken Popcorn": "Popcorn.png",
     "Chicken Strips": "strips.png",
     "Crab Lollipop": "crab-web.jpg",
     "Chicken Nuggets": "nuggets.png",

@@ -15,9 +15,9 @@ window.CHICK_BUCK_SEASONAL = Object.freeze({
 
   
     loader: {
-        enabled: false,
+        enabled: true,
         
-        maxDisplaySeconds: 5
+        maxDisplaySeconds: 8
     },
 
     content: {
