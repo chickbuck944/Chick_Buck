@@ -5107,6 +5107,34 @@ body.site-theme.home-page .experience-section .quality-item p {
     .home-page .home-scroll-card:not(.visible) { filter: none; }
 }
 
+/* The home hero has its own visible surface on phones. Animate that surface
+   directly so mobile has the same moving red-gold gradient as desktop. */
+@media (max-width: 767px) {
+    .home-page.site-theme .hero-section.video-hero {
+        background:
+            radial-gradient(circle at 13% 12%, rgba(255, 212, 0, 0.20), transparent 28%),
+            radial-gradient(circle at 87% 72%, rgba(255, 124, 40, 0.22), transparent 30%),
+            linear-gradient(135deg, #430809 0%, #7a0000 38%, #c40000 68%, #f20a0a 100%) !important;
+        background-size: 190% 190%;
+        background-position: 0% 50%;
+        animation: chickbuck-mobile-hero-gradient 15s ease-in-out infinite;
+    }
+
+    html[data-chickbuck-dark] .home-page.site-theme .hero-section.video-hero {
+        background:
+            radial-gradient(circle at 15% 12%, rgba(255, 200, 0, 0.10), transparent 28%),
+            radial-gradient(circle at 85% 72%, rgba(210, 25, 40, 0.16), transparent 31%),
+            linear-gradient(135deg, #090506 0%, #16070a 42%, #2c070d 72%, #420810 100%) !important;
+        background-size: 190% 190%;
+        animation: chickbuck-mobile-hero-gradient 15s ease-in-out infinite;
+    }
+}
+
+@keyframes chickbuck-mobile-hero-gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
 .reviews-slider {
     width: 100%;
     overflow: hidden;
