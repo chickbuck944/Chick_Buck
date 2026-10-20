@@ -2078,6 +2078,29 @@
         background-position: 0% 50%;
         animation: chickbuck-mobile-hero-gradient 15s ease-in-out infinite !important;
     }
+
+    .home-page .hero-background-animation {
+        background:
+            radial-gradient(circle at 12% 18%, rgba(255, 215, 0, 0.24), transparent 27%),
+            radial-gradient(circle at 90% 76%, rgba(255, 88, 24, 0.30), transparent 32%),
+            linear-gradient(125deg, #430809 0%, #7a0000 34%, #c40000 67%, #f20a0a 100%);
+        background-size: 260% 260%;
+        background-position: 0% 50%;
+        animation: chickbuck-mobile-hero-colour-shift 8s ease-in-out infinite !important;
+    }
+
+    html[data-chickbuck-dark] .home-page .hero-background-animation {
+        background:
+            radial-gradient(circle at 12% 18%, rgba(255, 210, 0, 0.16), transparent 27%),
+            radial-gradient(circle at 90% 76%, rgba(215, 24, 38, 0.24), transparent 32%),
+            linear-gradient(125deg, #090506 0%, #16070a 38%, #2c070d 68%, #420810 100%);
+        background-size: 260% 260%;
+    }
+}
+
+@keyframes chickbuck-mobile-hero-colour-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
 }
 
 
