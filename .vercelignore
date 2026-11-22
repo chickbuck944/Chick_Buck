@@ -4,6 +4,8 @@
 node_modules/
 *.unsaved-backup-*.html
 recovery-vscode-save-conflict-*/
+recovery-vscode-save-conflict-20260920
+recovery-vscode-save-conflict-20260920/**
 output/
 asset/video/outlet-tirur.mp4
 asset/video/tirur.mp4
