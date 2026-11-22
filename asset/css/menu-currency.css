@@ -1,0 +1,10 @@
+.menu-price .menu-currency {
+    display: inline-block;
+    margin-right: 1px;
+    font-family: 'Nirmala UI', 'Segoe UI', Arial, sans-serif;
+    font-size: .88em;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+    vertical-align: .04em;
+}

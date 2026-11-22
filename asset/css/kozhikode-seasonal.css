@@ -1,0 +1,364 @@
+/* Kozhikode launch: full-bleed cinematic hero, scoped to this slide. */
+.home-page.site-theme .hero-section.video-hero.is-kozhikode-active {
+    min-height: 100svh;
+    padding: 0;
+    background: #071b49;
+}
+
+.home-page.site-theme .hero-section.is-kozhikode-active .hero-background-animation {
+    opacity: 0;
+}
+
+.home-page .kozhikode-seasonal-slide {
+    min-height: 100svh;
+    overflow: hidden;
+    isolation: isolate;
+    color: #fff;
+    background: #071b49;
+}
+
+.home-page .kozhikode-seasonal-slide:not(.is-active),
+.home-page .is-kozhikode-active .signature-hero-slide {
+    display: none;
+}
+
+.home-page .kozhikode-seasonal-slide::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(90deg, rgba(2, 13, 44, .88) 0%, rgba(3, 19, 55, .76) 29%, rgba(3, 18, 51, .28) 62%, transparent 82%),
+        linear-gradient(180deg, rgba(2, 11, 37, .28), transparent 48%, rgba(0, 7, 25, .22));
+}
+
+/* Blend the bottom of this slide into the Journey section's opening colour. */
+.home-page .kozhikode-boundary-fade {
+    position: absolute;
+    z-index: 2;
+    inset: auto 0 0;
+    height: clamp(150px, 22svh, 260px);
+    pointer-events: none;
+    background: linear-gradient(180deg, transparent 0%, rgba(101, 0, 6, .45) 50%, #650006 100%);
+}
+
+.home-page .kozhikode-scene,
+.home-page .kozhikode-scene picture,
+.home-page .kozhikode-scene img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.home-page .kozhikode-scene img {
+    object-fit: cover;
+    object-position: center 54%;
+}
+
+.home-page.site-theme .video-hero .kozhikode-seasonal-slide > .kozhikode-layout {
+    position: relative;
+    z-index: 1;
+    width: min(1540px, calc(100% - 10vw));
+    min-height: 100svh;
+    margin-inline: auto;
+    padding: clamp(145px, 16vh, 205px) 0 70px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.home-page .kozhikode-copy {
+    width: min(620px, 52%);
+}
+
+.home-page .kozhikode-mobile-brand {
+    display: none;
+}
+
+.home-page .kozhikode-eyebrow {
+    margin: 0 0 26px;
+    color: rgba(255, 255, 255, .88);
+    font-size: clamp(11px, .9vw, 14px);
+    font-weight: 700;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+}
+
+.home-page .kozhikode-overline {
+    margin: 0 0 11px;
+    color: #ffda37;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.home-page .kozhikode-title {
+    margin: 0;
+    font-weight: 900;
+    line-height: .99;
+    letter-spacing: -.055em;
+    text-shadow: 0 8px 26px rgba(0, 7, 35, .24);
+}
+
+.home-page .kozhikode-title span,
+.home-page .kozhikode-title strong {
+    display: block;
+}
+
+.home-page .kozhikode-title span {
+    color: #fff;
+    font-size: clamp(38px, 3.3vw, 57px);
+}
+
+.home-page .kozhikode-title strong {
+    width: max-content;
+    max-width: 100%;
+    margin-top: 8px;
+    padding-bottom: 12px;
+    color: #ffda29;
+    font-size: clamp(58px, 5vw, 84px);
+    font-style: italic;
+    letter-spacing: -.07em;
+    background: linear-gradient(#ffda29, #ffda29) left bottom 2px / 100% 5px no-repeat;
+}
+
+.home-page .kozhikode-description {
+    max-width: 540px;
+    margin: 25px 0 24px;
+    color: rgba(255, 255, 255, .93);
+    font-size: clamp(16px, 1.15vw, 19px);
+    line-height: 1.55;
+}
+
+.home-page .kozhikode-features {
+    width: min(430px, 100%);
+    margin: 0 0 27px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.home-page .kozhikode-features > div {
+    min-height: 74px;
+    padding: 4px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-align: center;
+}
+
+.home-page .kozhikode-features > div + div {
+    border-left: 1px solid rgba(255, 255, 255, .32);
+}
+
+.home-page .kozhikode-features svg {
+    width: 33px;
+    height: 33px;
+    fill: none;
+    stroke: #ffdc37;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.home-page .kozhikode-features span {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.14;
+}
+
+.home-page .kozhikode-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 22px;
+}
+
+.home-page .kozhikode-actions .button {
+    min-height: 56px;
+    padding: 0 26px;
+    display: inline-flex;
+    align-items: center;
+    gap: 26px;
+    border-radius: 999px;
+    color: #fff;
+    background: #d0001d;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .22);
+    font-weight: 800;
+}
+
+.home-page .kozhikode-actions .button:hover,
+.home-page .kozhikode-actions .button:focus-visible {
+    background: #a90018;
+    transform: translateY(-2px);
+}
+
+.home-page .kozhikode-actions .button::after {
+    content: "\2192";
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.home-page .kozhikode-contact {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.home-page .kozhikode-opening {
+    margin: 20px 0 0;
+    color: rgba(255, 255, 255, .78);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.home-page .kozhikode-opening span {
+    color: #ffda37;
+}
+
+.home-page .is-kozhikode-active .hero-carousel-controls {
+    bottom: 24px;
+    border-color: rgba(255, 255, 255, .3);
+    background: rgba(3, 18, 52, .68);
+}
+
+.home-page .is-kozhikode-active .hero-carousel-arrow {
+    color: #fff;
+}
+
+.home-page .is-kozhikode-active .hero-carousel-dot:not(.is-active) {
+    background: rgba(255, 255, 255, .45);
+}
+
+@media (max-width: 1100px) {
+    .home-page .kozhikode-copy { width: min(570px, 57%); }
+    .home-page .kozhikode-title span { font-size: clamp(37px, 4.4vw, 54px); }
+    .home-page .kozhikode-title strong { font-size: clamp(56px, 6.5vw, 76px); }
+}
+
+@media (max-width: 1024px) {
+    .home-page .kozhikode-mobile-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        margin-bottom: 28px;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 800;
+    }
+    .home-page .kozhikode-mobile-brand img {
+        width: 44px;
+        height: 44px;
+        object-fit: contain;
+        border-radius: 50%;
+        background: #fff;
+    }
+}
+
+@media (max-width: 900px) {
+    .home-page.site-theme .hero-section.video-hero.is-kozhikode-active {
+        min-height: max(100svh, 760px);
+        padding: 0 !important;
+        align-items: stretch;
+    }
+    .home-page .kozhikode-seasonal-slide { min-height: max(100svh, 760px); display: block; }
+    .home-page.site-theme .video-hero .kozhikode-seasonal-slide > .kozhikode-layout {
+        width: min(720px, calc(100% - 48px));
+        min-height: max(100svh, 760px);
+        padding: 36px 0 95px;
+        display: block;
+    }
+    .home-page .kozhikode-copy { width: min(530px, 70%); }
+    .home-page .kozhikode-eyebrow { margin-bottom: 17px; }
+    .home-page .kozhikode-description { margin: 22px 0; }
+    .home-page .kozhikode-seasonal-slide::after {
+        background: linear-gradient(90deg, rgba(2, 13, 44, .88), rgba(3, 18, 51, .38) 64%, transparent);
+    }
+}
+
+@media (max-width: 600px) {
+    .home-page.site-theme .hero-section.video-hero.is-kozhikode-active,
+    .home-page .kozhikode-seasonal-slide {
+        min-height: max(100svh, 740px);
+    }
+    .home-page.site-theme .video-hero .kozhikode-seasonal-slide > .kozhikode-layout {
+        width: calc(100% - 36px);
+        min-height: max(100svh, 740px);
+        padding: 23px 0 115px;
+    }
+    .home-page .kozhikode-scene img {
+        object-position: center 52%;
+        transform: translateX(-12%) scale(1.34);
+        transform-origin: center bottom;
+    }
+    .home-page .kozhikode-seasonal-slide::after {
+        background: linear-gradient(180deg, rgba(1, 13, 46, .72) 0%, rgba(2, 22, 61, .42) 38%, transparent 61%, rgba(1, 9, 29, .22) 100%);
+    }
+    .home-page .kozhikode-copy { width: 100%; }
+    .home-page .kozhikode-mobile-brand { margin-bottom: 0; }
+    .home-page .kozhikode-eyebrow { display: none; }
+    .home-page .kozhikode-overline {
+        margin: clamp(30px, 6svh, 54px) 0 11px;
+        font-size: 11px;
+        text-align: center;
+    }
+    .home-page .kozhikode-title { text-align: center; }
+    .home-page .kozhikode-title span { font-size: clamp(31px, 8vw, 41px); }
+    .home-page .kozhikode-title strong {
+        margin: 5px auto 0;
+        padding-bottom: 0;
+        color: #fff;
+        font-size: clamp(51px, 13vw, 68px);
+        font-style: normal;
+        background: none;
+        text-shadow: 0 4px 22px rgba(51, 159, 230, .55);
+    }
+    .home-page .kozhikode-description {
+        max-width: 310px;
+        margin: 18px auto 22px;
+        font-size: 14px;
+        line-height: 1.48;
+        text-align: center;
+    }
+    .home-page .kozhikode-features { display: none; }
+    .home-page .kozhikode-actions { justify-content: center; }
+    .home-page .kozhikode-actions .button { min-height: 49px; padding: 0 22px; gap: 17px; }
+    .home-page .kozhikode-contact,
+    .home-page .kozhikode-opening { display: none; }
+    .home-page .is-kozhikode-active .hero-carousel-controls {
+        top: 24px;
+        right: 44px;
+        bottom: auto;
+        left: auto;
+        width: 38px;
+        min-height: 38px;
+        padding: 0;
+        justify-content: center;
+        border-color: #d0001d;
+        border-radius: 50%;
+        background: #d0001d;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, .2);
+        transform: none;
+    }
+    .home-page .is-kozhikode-active #heroSlidePrev,
+    .home-page .is-kozhikode-active .hero-carousel-dots { display: none; }
+    .home-page .is-kozhikode-active #heroSlideNext {
+        width: 36px;
+        height: 36px;
+        color: #fff;
+        font-size: 17px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-page .kozhikode-actions .button { transition: none; }
+}

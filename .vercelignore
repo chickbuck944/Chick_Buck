@@ -1,0 +1,9 @@
+.env*
+.vercel/
+.git/
+node_modules/
+*.unsaved-backup-*.html
+recovery-vscode-save-conflict-*/
+output/
+asset/video/outlet-tirur.mp4
+asset/video/tirur.mp4

@@ -1,0 +1,182 @@
+/* Full-bleed home video. This stylesheet follows the legacy responsive rules. */
+.home-page.site-theme .hero-section.video-hero {
+    min-height: 100svh;
+    padding: 0;
+    background: #450006;
+}
+
+.home-page .video-hero .hero-carousel,
+.home-page .video-hero .signature-hero-slide {
+    min-height: 100svh;
+}
+
+.home-page.site-theme .video-hero .signature-hero-slide .hero-grid {
+    position: static;
+    display: flex;
+    align-items: center;
+    width: min(1440px, calc(100% - 80px));
+    min-height: 100svh;
+    padding: 150px 0 115px;
+    margin-inline: auto;
+}
+
+.home-page .video-hero .signature-hero-slide .hero-copy {
+    position: relative;
+    z-index: 3;
+    width: min(720px, 60%);
+    text-align: left;
+    text-shadow: 0 2px 18px #23000099;
+}
+
+.home-page .video-hero .signature-hero-slide .hero-visual,
+.home-page .video-hero .signature-hero-slide .hero-video-shell,
+.home-page .video-hero .signature-hero-slide .hero-video-frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    max-width: none;
+    aspect-ratio: auto;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none !important;
+    perspective: none;
+}
+
+.home-page .video-hero .signature-hero-slide .hero-visual {
+    z-index: 0;
+    opacity: 1 !important;
+    pointer-events: none;
+}
+
+.home-page .video-hero .signature-hero-slide .hero-promo-video {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.home-page .video-hero .signature-hero-slide .hero-video-overlay {
+    background: linear-gradient(90deg, #260000dc 0%, #430000ae 43%, #24000062 100%),
+        linear-gradient(0deg, #29000084, transparent 30%);
+}
+
+.home-page .video-hero .signature-hero-slide .hero-video-glow,
+.home-page .video-hero .signature-hero-slide .hero-video-frame::before,
+.home-page .video-hero .signature-hero-slide .hero-video-brand,
+.home-page .video-hero .signature-hero-slide .hero-video-caption,
+.home-page .video-hero .signature-hero-slide .hero-ring {
+    display: none !important;
+}
+
+.home-page .video-hero .signature-hero-slide .hero-sound-toggle {
+    top: 145px;
+    right: max(40px, calc((100vw - 1440px) / 2));
+    z-index: 6;
+    pointer-events: auto;
+}
+
+.home-page .video-hero .signature-hero-slide .hero-price-badge {
+    top: auto;
+    right: max(40px, calc((100vw - 1440px) / 2));
+    bottom: 110px;
+    left: auto;
+    z-index: 6;
+    animation: none;
+}
+
+.home-page .video-hero .signature-hero-slide .hero-actions,
+.home-page .video-hero .signature-hero-slide .hero-stats {
+    justify-content: flex-start;
+}
+
+.home-page .video-hero .hero-carousel-controls {
+    bottom: 28px;
+}
+
+/* Keep the optional seasonal slide usable if it is turned on later. */
+.home-page.site-theme .video-hero .seasonal-hero-slide > .container {
+    min-height: 100svh;
+    padding-top: 145px;
+    padding-bottom: 100px;
+}
+
+@media (max-width: 900px) {
+    .home-page.site-theme .video-hero .signature-hero-slide .hero-grid {
+        width: min(680px, 90%);
+        min-height: 100svh;
+        padding: 155px 0 135px;
+    }
+
+    .home-page .video-hero .signature-hero-slide .hero-copy {
+        width: 100%;
+        text-align: left;
+    }
+
+    .home-page .video-hero .signature-hero-slide .hero-description,
+    .home-page .video-hero .signature-hero-slide .hero-divider {
+        margin-left: 0;
+    }
+
+    .home-page .video-hero .signature-hero-slide .hero-video-overlay {
+        background: linear-gradient(90deg, #310000c9, #3b000084),
+            linear-gradient(0deg, #250000a3, transparent 55%);
+    }
+
+    .home-page .video-hero .signature-hero-slide .hero-sound-toggle {
+        top: 105px;
+        right: 5%;
+    }
+
+    .home-page .video-hero .signature-hero-slide .hero-price-badge {
+        right: 5%;
+        bottom: 95px;
+    }
+
+    .home-page .video-hero .hero-carousel-controls {
+        bottom: 96px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-page .hero-price-badge.hero-price-badge--mobile {
+        display: none !important;
+    }
+
+    .home-page .hero-sound-toggle.hero-sound-toggle--mobile {
+        top: 96px;
+        right: 5%;
+        bottom: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-page.site-theme .video-hero .signature-hero-slide .hero-grid {
+        width: 90%;
+        padding: 150px 0 165px;
+    }
+
+    .home-page .video-hero .signature-hero-slide .hero-title {
+        font-size: clamp(36px, 10vw, 52px);
+    }
+
+    .home-page .video-hero .signature-hero-slide .hero-description {
+        font-size: 14px;
+    }
+
+    .home-page .video-hero .signature-hero-slide .hero-stats {
+        justify-content: flex-start;
+    }
+
+    .home-page .video-hero .signature-hero-slide .hero-price-badge {
+        display: none !important;
+    }
+
+    .home-page .video-hero .hero-carousel-controls {
+        bottom: 105px;
+    }
+}

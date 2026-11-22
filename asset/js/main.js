@@ -1473,6 +1473,20 @@ document.addEventListener("DOMContentLoaded", () => {
         updateSoundButton();
 
 
+        // Pause decoding in background tabs even with a single hero slide.
+        document.addEventListener("visibilitychange", () => {
+            if (document.hidden) {
+                heroVideo.pause();
+                return;
+            }
+            const bounds = heroVideo.getBoundingClientRect();
+            const slide = heroVideo.closest(".hero-slide");
+            if (bounds.bottom > 0 && bounds.top < window.innerHeight &&
+                (!slide || slide.classList.contains("is-active"))) {
+                heroVideo.play().catch(() => {});
+            }
+        });
+
         if (
             "IntersectionObserver" in window
         ) {
@@ -1485,7 +1499,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             (entry) => {
 
                                 if (
-                                    entry.isIntersecting &&
+                                    entry.isIntersecting && !document.hidden &&
                                     (
                                         !heroVideo.closest(".hero-slide") ||
                                         heroVideo.closest(".hero-slide").classList.contains("is-active")
@@ -1821,6 +1835,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const showHeroSlide = (requestedIndex, announce = true) => {
             activeHeroSlide =
                 (requestedIndex + heroSlides.length) % heroSlides.length;
+
+            heroCarousel.closest(".video-hero")?.classList.toggle(
+                "is-kozhikode-active",
+                heroSlides[activeHeroSlide] === seasonalSlide
+            );
 
             heroSlides.forEach((slide, index) => {
                 const isActive = index === activeHeroSlide;
@@ -3599,40 +3618,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    const gallery = document.querySelector("[data-home-gallery]");
-
-    if (!gallery) {
-        return;
-    }
-
-    gallery.classList.add("home-gallery-motion");
-
-    const revealGallery = () => {
-        gallery.classList.add("is-revealed");
-    };
-
-    if (
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
-        !("IntersectionObserver" in window)
-    ) {
-        revealGallery();
-        return;
-    }
-
-    const galleryObserver = new IntersectionObserver(
-        (entries, observer) => {
-            if (!entries[0]?.isIntersecting) {
-                return;
-            }
-
-            revealGallery();
-            observer.disconnect();
-        },
-        {
-            threshold: 0.12,
-            rootMargin: "0px 0px -45px 0px"
-        }
-    );
-
-    galleryObserver.observe(gallery);
 });

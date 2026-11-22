@@ -1,0 +1,40 @@
+/* Let the review and FAQ colours continue into the following section,
+   then dissolve them gradually instead of drawing a horizontal seam. */
+body.home-page .reviews-section,
+body.home-page .faq-section {
+    overflow: visible;
+    box-shadow: none;
+}
+
+body.home-page .reviews-section { z-index: 3; }
+body.home-page .faq-section { z-index: 2; }
+body.home-page .home-cta { z-index: 1; box-shadow: none; }
+
+body.home-page .reviews-section::after,
+body.home-page .faq-section::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: calc(100% + 120px);
+    z-index: 1;
+    pointer-events: none;
+    background: inherit;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 120px), transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 120px), transparent 100%);
+}
+
+body.home-page .faq-section .faq-layout { position: relative; z-index: 2; }
+
+@media (max-width: 767px) {
+    body.home-page .reviews-section,
+    body.home-page .faq-section {
+        content-visibility: visible;
+        contain: none;
+    }
+    body.home-page .reviews-section::after,
+    body.home-page .faq-section::after {
+        height: calc(100% + 84px);
+        -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 84px), transparent 100%);
+        mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 84px), transparent 100%);
+    }
+}

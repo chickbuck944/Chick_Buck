@@ -1,0 +1,119 @@
+/* Mobile arrival-slide masthead. The official brand mark stays untouched. */
+@media (max-width: 600px) {
+    .home-page .calicut-hero-slide .calicut-mobile-brand {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 70px;
+        margin-bottom: 27px;
+        padding: 10px 70px 10px 12px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, .34);
+        border-radius: 20px;
+        background: linear-gradient(120deg, rgba(4, 24, 65, .82), rgba(10, 70, 123, .37) 72%, rgba(255, 255, 255, .13));
+        box-shadow: 0 13px 34px rgba(0, 27, 64, .24), inset 0 1px rgba(255, 255, 255, .17);
+        text-shadow: 0 2px 8px rgba(0, 22, 64, .45);
+        isolation: isolate;
+    }
+
+    .home-page .calicut-hero-slide .calicut-mobile-brand::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: -45% auto -45% -75%;
+        width: 55%;
+        transform: skewX(-24deg);
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .17), transparent);
+        animation: calicut-masthead-light 6s ease-in-out 1.2s infinite;
+        pointer-events: none;
+    }
+
+    .home-page .calicut-hero-slide .calicut-mobile-brand img {
+        flex: none;
+        width: 44px;
+        height: 44px;
+        border: 2px solid rgba(255, 255, 255, .92);
+        box-shadow: 0 0 0 4px rgba(255, 214, 37, .17), 0 4px 13px rgba(0, 15, 50, .28);
+    }
+
+    .home-page .calicut-mobile-brand-copy {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        gap: 1px;
+    }
+
+    .home-page .calicut-mobile-brand-copy strong {
+        font-size: 15px;
+        line-height: 1.15;
+        white-space: nowrap;
+    }
+
+    .home-page .calicut-mobile-brand-copy small {
+        color: #ffe36a;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: .055em;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+    .home-page .calicut-hero-slide .calicut-hero-kicker {
+        display: inline-flex;
+        align-items: center;
+        max-width: 100%;
+        margin-bottom: 14px;
+        padding: 7px 10px;
+        border: 1px solid rgba(255, 226, 113, .55);
+        border-radius: 999px;
+        background: rgba(0, 35, 85, .52);
+        box-shadow: 0 5px 18px rgba(0, 28, 67, .18);
+        font-size: clamp(8px, 2.45vw, 10px);
+        letter-spacing: .075em;
+        gap: 7px;
+    }
+
+    .home-page .calicut-hero-slide .calicut-hero-kicker::before {
+        content: "";
+        flex: none;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #ffdc26;
+        box-shadow: 0 0 0 3px rgba(255, 220, 38, .18), 0 0 11px #ffdc26;
+    }
+
+    .home-page .is-kozhikode-active .hero-carousel-controls {
+        top: 38px;
+        right: 32px;
+        width: 46px;
+        min-height: 46px;
+        border: 1px solid rgba(255, 255, 255, .85);
+        background: linear-gradient(145deg, #f50c25, #ae001a);
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, .13), 0 7px 18px rgba(71, 0, 31, .32);
+        animation: calicut-arrow-breathe 3.4s ease-in-out infinite;
+    }
+
+    .home-page .is-kozhikode-active #heroSlideNext {
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+        line-height: 1;
+    }
+}
+
+@keyframes calicut-masthead-light {
+    0%, 13% { left: -75%; }
+    35%, 100% { left: 140%; }
+}
+
+@keyframes calicut-arrow-breathe {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(255, 255, 255, .13), 0 7px 18px rgba(71, 0, 31, .32); }
+    50% { box-shadow: 0 0 0 7px rgba(255, 221, 38, .18), 0 7px 22px rgba(71, 0, 31, .42); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-page .calicut-hero-slide .calicut-mobile-brand::before,
+    .home-page .is-kozhikode-active .hero-carousel-controls { animation: none; }
+}

@@ -1,4 +1,4 @@
-﻿
+
 
 /*
    CHICK BUCK â€” MAIN STYLE
@@ -662,39 +662,6 @@ button {
     100% {
         opacity: 0;
         transform: translateY(13px);
-    }
-}
-
-/* ==================================================
-   MOVING BRAND STRIP
-================================================== */
-
-.brand-strip {
-    overflow: hidden;
-    padding: 18px 0;
-    color: var(--red);
-    background: var(--yellow);
-}
-
-.strip-track {
-    width: max-content;
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    font-size: 17px;
-    font-weight: 900;
-    text-transform: uppercase;
-    animation: stripMove 22s linear infinite;
-}
-
-.strip-track b {
-    color: var(--white);
-    font-size: 28px;
-}
-
-@keyframes stripMove {
-    to {
-        transform: translateX(-50%);
     }
 }
 
@@ -4626,7 +4593,14 @@ body.site-theme .site-footer {
 }
 
 .hero-price-badge strong span {
-    font-size: 21px;
+    display: inline-block;
+    margin-right: 2px;
+    font-family: 'Segoe UI', 'Nirmala UI', Arial, sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+    vertical-align: 1px;
 }
 
 .hero-ring {
@@ -4778,7 +4752,8 @@ body.site-theme .site-footer {
 
 body.home-page .specials-section,
 body.site-theme.home-page .specials-section {
-    background: #fff7ed !important;
+    --specials-exit-fade: clamp(150px, 18vw, 230px);
+    background: linear-gradient(180deg, #fff7ed 0%, #fff7ed calc(100% - var(--specials-exit-fade)), #ffffff 100%) !important;
     color: #171717 !important;
     border-top: none !important;
     border-bottom: none !important;
@@ -5125,29 +5100,48 @@ body.site-theme.home-page .experience-section .quality-item p {
 /* The home hero has its own visible surface on phones. Animate that surface
    directly so mobile has the same moving red-gold gradient as desktop. */
 @media (max-width: 767px) {
-    .home-page.site-theme .hero-section.video-hero {
-        background:
-            radial-gradient(circle at 13% 12%, rgba(255, 212, 0, 0.20), transparent 28%),
-            radial-gradient(circle at 87% 72%, rgba(255, 124, 40, 0.22), transparent 30%),
-            linear-gradient(135deg, #430809 0%, #7a0000 38%, #c40000 68%, #f20a0a 100%) !important;
-        background-size: 190% 190%;
-        background-position: 0% 50%;
-        animation: chickbuck-mobile-hero-gradient 15s ease-in-out infinite;
+    /* Use a real hero layer rather than a fixed body background. Mobile
+       browsers can freeze fixed-background animations while scrolling. */
+    .home-page.site-theme .hero-background-animation {
+        background: #790006;
     }
 
-    html[data-chickbuck-dark] .home-page.site-theme .hero-section.video-hero {
+    .home-page.site-theme .hero-background-animation::before {
+        content: "";
+        position: absolute;
+        inset: -18% -38%;
         background:
-            radial-gradient(circle at 15% 12%, rgba(255, 200, 0, 0.10), transparent 28%),
-            radial-gradient(circle at 85% 72%, rgba(210, 25, 40, 0.16), transparent 31%),
-            linear-gradient(135deg, #090506 0%, #16070a 42%, #2c070d 72%, #420810 100%) !important;
-        background-size: 190% 190%;
-        animation: chickbuck-mobile-hero-gradient 15s ease-in-out infinite;
+            radial-gradient(circle at 18% 22%, rgba(255, 212, 0, 0.29), transparent 29%),
+            radial-gradient(circle at 82% 76%, rgba(255, 124, 40, 0.30), transparent 32%),
+            linear-gradient(112deg, #430809 0%, #7a0000 32%, #c40000 55%, #f20a0a 72%, #630007 100%);
+        background-size: 220% 180%;
+        animation: chickbuck-mobile-hero-flow 12s ease-in-out infinite;
+        will-change: transform, background-position;
     }
+
+    html[data-chickbuck-dark] .home-page.site-theme .hero-background-animation {
+        background: #16070a;
+    }
+
+    html[data-chickbuck-dark] .home-page.site-theme .hero-background-animation::before {
+        background:
+            radial-gradient(circle at 18% 22%, rgba(255, 200, 0, 0.12), transparent 29%),
+            radial-gradient(circle at 82% 76%, rgba(210, 25, 40, 0.20), transparent 32%),
+            linear-gradient(112deg, #090506 0%, #16070a 32%, #3c0710 55%, #57060d 72%, #170307 100%);
+    }
+
 }
 
-@keyframes chickbuck-mobile-hero-gradient {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+@keyframes chickbuck-mobile-hero-flow {
+    0%, 100% {
+        background-position: 0% 50%;
+        transform: translate3d(-5%, 0, 0) scale(1.04);
+    }
+
+    50% {
+        background-position: 100% 50%;
+        transform: translate3d(5%, 0, 0) scale(1.04);
+    }
 }
 
 .reviews-slider {
@@ -5208,8 +5202,8 @@ body.site-theme.home-page .experience-section .quality-item p {
     .cookie-settings-button { right: 12px; bottom: 12px; }
 }
 
-@media (max-width: 767px) {
-    /* Keep cookie controls clear of the fixed five-item mobile navigation. */
+@media (max-width: 1024px) {
+    /* Keep cookie controls clear of the fixed five-item mobile/tablet navigation. */
     body.has-mobile-bottom-nav .cookie-consent-banner {
         right: 12px;
         bottom: calc(100px + env(safe-area-inset-bottom));
@@ -5948,273 +5942,6 @@ body.page-leaving > footer {
     }
 }
 
-/* ==================================================
-   HOME â€” FLOATING MOMENTS GALLERY
-================================================== */
-
-.home-gallery-showcase {
-    position: relative;
-    min-height: 880px;
-    padding: 104px 0 88px;
-    overflow: hidden;
-    isolation: isolate;
-    color: #ffffff;
-    background:
-        radial-gradient(circle at 17% 18%, rgba(255, 192, 0, 0.2), transparent 27%),
-        radial-gradient(circle at 83% 72%, rgba(255, 80, 50, 0.2), transparent 30%),
-        linear-gradient(145deg, #410008 0%, #780813 45%, #ad101c 100%);
-}
-
-.home-gallery-showcase::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    opacity: 0.2;
-    pointer-events: none;
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-    background-size: 54px 54px;
-    mask-image: linear-gradient(to bottom, transparent, #000 25%, #000 75%, transparent);
-}
-
-.home-gallery-glow {
-    position: absolute;
-    top: 29%;
-    left: 50%;
-    z-index: -1;
-    width: min(72vw, 960px);
-    aspect-ratio: 2 / 1;
-    border-radius: 50%;
-    opacity: 0.33;
-    pointer-events: none;
-    background: rgba(255, 202, 0, 0.45);
-    filter: blur(110px);
-    transform: translate(-50%, -50%);
-}
-
-.home-gallery-copy {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-}
-
-.home-gallery-kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 18px;
-    color: #ffd525;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-}
-
-.home-gallery-kicker::before,
-.home-gallery-kicker::after {
-    content: "";
-    width: 32px;
-    height: 2px;
-    border-radius: 999px;
-    background: currentColor;
-}
-
-.home-gallery-copy h2 {
-    margin: 0;
-    text-transform: uppercase;
-}
-
-.home-gallery-copy h2 span {
-    position: relative;
-    z-index: 2;
-    display: block;
-    color: #ffffff;
-    font-size: clamp(42px, 5.2vw, 76px);
-    font-weight: 900;
-    line-height: 0.98;
-    letter-spacing: -0.055em;
-}
-
-.home-gallery-copy h2 strong {
-    display: block;
-    width: min(100%, 1180px);
-    margin: 10px auto 0;
-    color: transparent;
-    font-size: clamp(78px, 10vw, 146px);
-    font-weight: 900;
-    line-height: 0.88;
-    letter-spacing: -0.065em;
-    word-spacing: 0.08em;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.35);
-}
-
-.home-gallery-intro {
-    position: relative;
-    z-index: 3;
-    max-width: 620px;
-    margin: 30px auto 0;
-    color: rgba(255, 255, 255, 0.78);
-    font-size: 15px;
-    line-height: 1.7;
-    text-align: center;
-}
-
-.home-gallery-stage {
-    position: relative;
-    z-index: 2;
-    width: min(96vw, 1440px);
-    height: 430px;
-    margin: 34px auto 0;
-}
-
-.home-gallery-card {
-    --card-rotate: 0deg;
-    position: absolute;
-    display: block;
-    width: clamp(150px, 15.5vw, 224px);
-    aspect-ratio: 4 / 5;
-    overflow: hidden;
-    border: 6px solid rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    color: #ffffff;
-    background: #1f0206;
-    box-shadow:
-        0 26px 60px rgba(24, 0, 4, 0.38),
-        0 2px 0 rgba(255, 255, 255, 0.55) inset;
-    transform: rotate(var(--card-rotate));
-    transition:
-        opacity 650ms ease,
-        transform 760ms cubic-bezier(0.22, 1, 0.36, 1),
-        box-shadow 320ms ease;
-    transition-delay: var(--card-delay, 0ms);
-}
-
-.home-gallery-card img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    transition: transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.home-gallery-card::after {
-    content: "";
-    position: absolute;
-    inset: 44% 0 0;
-    pointer-events: none;
-    background: linear-gradient(to bottom, transparent, rgba(35, 0, 5, 0.88));
-}
-
-.home-gallery-card > span {
-    position: absolute;
-    right: 15px;
-    bottom: 14px;
-    left: 15px;
-    z-index: 2;
-    font-size: clamp(15px, 1.25vw, 19px);
-    font-weight: 800;
-    line-height: 1.15;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.46);
-}
-
-.home-gallery-card small {
-    display: block;
-    margin-bottom: 5px;
-    color: #ffd525;
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-}
-
-.home-gallery-card-one {
-    --card-rotate: -9deg;
-    --card-delay: 40ms;
-    top: 90px;
-    left: 1.5%;
-}
-
-.home-gallery-card-two {
-    --card-rotate: 5deg;
-    --card-delay: 110ms;
-    top: 10px;
-    left: 18%;
-}
-
-.home-gallery-card-three {
-    --card-rotate: -4deg;
-    --card-delay: 180ms;
-    top: 128px;
-    left: 34.5%;
-}
-
-.home-gallery-card-four {
-    --card-rotate: 7deg;
-    --card-delay: 250ms;
-    top: 20px;
-    left: 51%;
-}
-
-.home-gallery-card-five {
-    --card-rotate: -7deg;
-    --card-delay: 320ms;
-    top: 122px;
-    left: 67.5%;
-}
-
-.home-gallery-card-six {
-    --card-rotate: 8deg;
-    --card-delay: 390ms;
-    top: 14px;
-    left: 83%;
-}
-
-.home-gallery-motion .home-gallery-card {
-    opacity: 0;
-    transform: translate3d(0, 58px, 0) rotate(0deg) scale(0.91);
-}
-
-.home-gallery-motion.is-revealed .home-gallery-card {
-    opacity: 1;
-    transform: rotate(var(--card-rotate));
-}
-
-.home-gallery-footer {
-    position: relative;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 22px;
-    margin-top: -12px;
-}
-
-.home-gallery-footer p {
-    color: rgba(255, 255, 255, 0.82);
-    font-size: 15px;
-    font-weight: 600;
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .home-gallery-motion.is-revealed .home-gallery-card:hover,
-    .home-gallery-motion.is-revealed .home-gallery-card:focus-visible {
-        z-index: 10;
-        outline: none;
-        box-shadow:
-            0 36px 76px rgba(20, 0, 3, 0.5),
-            0 0 0 3px #ffd525;
-        transform: translateY(-13px) rotate(0deg) scale(1.045);
-    }
-
-    .home-gallery-card:hover img,
-    .home-gallery-card:focus-visible img {
-        transform: scale(1.075);
-    }
-}
 
 /* ==================================================
    HOME PAGE â€” DISTINCT HERO-INSPIRED RED SECTIONS
@@ -6599,7 +6326,7 @@ body.site-theme.home-page .home-cta {
     display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
     body.has-mobile-bottom-nav {
         padding-bottom: calc(100px + env(safe-area-inset-bottom));
     }
@@ -6621,8 +6348,15 @@ body.site-theme.home-page .home-cta {
         border: 1px solid rgba(255, 221, 75, 0.34);
         border-radius: 999px;
         background:
-            linear-gradient(135deg, rgba(73, 7, 12, 0.92), rgba(163, 5, 15, 0.88)),
+            linear-gradient(112deg,
+                rgba(73, 7, 12, 0.94) 0%,
+                rgba(163, 5, 15, 0.90) 30%,
+                rgba(255, 194, 181, 0.24) 49%,
+                rgba(126, 3, 12, 0.92) 67%,
+                rgba(73, 7, 12, 0.94) 100%),
             rgba(75, 5, 11, 0.86);
+        background-size: 240% 100%;
+        animation: chickbuck-liquid-metal-flow 9s ease-in-out infinite;
         box-shadow:
             0 18px 46px rgba(63, 0, 5, 0.38),
             inset 0 1px 0 rgba(255, 255, 255, 0.16);
@@ -6733,6 +6467,10 @@ body.site-theme.home-page .home-cta {
 @media (prefers-reduced-motion: reduce) {
     .mobile-bottom-nav__item {
         transition: none !important;
+    }
+
+    .mobile-bottom-nav {
+        animation: none !important;
     }
 }
 
@@ -9191,7 +8929,7 @@ body.first-shop-lightbox-open {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
     .mobile-bottom-nav__inner {
         position: relative;
         isolation: isolate;
@@ -9387,8 +9125,7 @@ html[data-chickbuck-dark] .site-header .glass-visit-button::before,
 html[data-chickbuck-dark] body.site-theme :is(
     .hero-orb,
     .hero-particles,
-    .reviews-glow,
-    .home-gallery-glow
+    .reviews-glow
 ) {
     display: none !important;
 }
@@ -9480,7 +9217,7 @@ html[data-chickbuck-dark] body.site-theme :is(input, textarea, select, .menu-sea
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
     .mobile-bottom-nav__inner {
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
@@ -9625,13 +9362,6 @@ html[data-chickbuck-dark] body.site-theme :is(input, textarea, select, .menu-sea
 @keyframes chickbuck-liquid-metal-flow {
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
-}
-
-@keyframes chickbuck-liquid-metal-highlight {
-    0%, 24% { left: -42%; opacity: 0; }
-    32% { opacity: 0.7; }
-    58% { left: 105%; opacity: 0.25; }
-    66%, 100% { left: 115%; opacity: 0; }
 }
 
 /* Radial-glow order buttons, adapted for the Chick Buck HTML site. */
@@ -9894,5 +9624,31 @@ html[data-chickbuck-dark] body.site-theme :is(input, textarea, select, .menu-sea
     body.site-theme .about-values {
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
+    }
+}
+
+/* The tenth outlet is announced but is not yet open. */
+.footer-outlet-grid a.footer-outlet-coming-soon {
+    grid-template-columns: 28px minmax(0, 1fr) 84px;
+    border-color: rgba(255, 212, 0, .32);
+}
+.footer-outlet-grid a.footer-outlet-coming-soon i {
+    width: 84px;
+    padding: 0 6px;
+    border-radius: 999px;
+    font-size: 9px;
+    white-space: nowrap;
+}
+@media (max-width: 767px) {
+    .footer-outlet-grid a.footer-outlet-coming-soon {
+        grid-template-columns: 14px minmax(0, 1fr) 43px;
+    }
+    .footer-outlet-grid a.footer-outlet-coming-soon i {
+        width: 43px;
+        padding: 0 2px;
+        font-size: 7px;
+        line-height: 1.05;
+        text-align: center;
+        white-space: normal;
     }
 }
